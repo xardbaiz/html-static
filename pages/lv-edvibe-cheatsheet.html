@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Шпаргалка: Латышский язык (A1-A2)</title>
+
+    <!-- Materialize CSS & Material Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Закрепленная верхняя плашка */
+        .sticky-nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-header {
+            padding-top: 10px;
+            padding-bottom: 5px;
+            height: auto !important;
+            line-height: normal !important;
+        }
+
+        .nav-container {
+            width: 95%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .brand-logo-custom {
+            font-weight: 500;
+            font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Все вкладки видны, переносятся на новую строку при необходимости */
+        .nav-content {
+            height: auto !important;
+        }
+
+        /* Стили для табов */
+        .tabs.tabs-transparent {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            overflow-x: visible;
+            gap: 6px 8px;
+            padding: 8px 0 10px 0;
+        }
+
+        .tabs.tabs-transparent .tab {
+            height: 36px;
+            line-height: 36px;
+            flex: 0 0 auto;
+        }
+
+        .tabs.tabs-transparent .tab a {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 12px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.88);
+            background-color: rgba(255, 255, 255, 0.12);
+            transition: all 0.2s ease;
+        }
+
+        .tabs.tabs-transparent .tab a:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+
+        /* Активная вкладка: максимальный приоритет для переопределения Materialize */
+        .tabs.tabs-transparent .tab a.active,
+        .tabs.tabs-transparent .tab a.active:hover {
+            background-color: #ff9800 !important;
+            color: #ffffff !important;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        .tabs.tabs-transparent .tab a i.material-icons {
+            margin-right: 6px;
+            font-size: 1.15rem;
+            line-height: inherit;
+        }
+
+        .tabs .indicator {
+            display: none !important; /* Убираем стандартную нижнюю полоску Materialize */
+        }
+
+        .search-card {
+            margin-top: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .tab-content {
+            padding-top: 10px;
+            padding-bottom: 40px;
+        }
+
+        .word-badge {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a237e;
+            cursor: pointer;
+        }
+
+        .antonym-divider {
+            color: #e65100;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .emoji-cell {
+            font-size: 1.4rem;
+            text-align: center;
+            width: 50px;
+        }
+
+        .card-panel-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #1a237e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar with Tabs (Sticky & Full Visibility) -->
+<nav class="nav-extended indigo darken-3 sticky-nav">
+    <div class="nav-container">
+        <div class="nav-wrapper nav-header">
+        <span class="brand-logo-custom">
+          <i class="material-icons">translate</i>
+          Латышский язык - Полная Шпаргалка из материалов Edvibe
+        </span>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#tab-antonyms"><i class="material-icons left">compare_arrows</i>Антонимы</a>
+                </li>
+                <li class="tab"><a href="#tab-people"><i class="material-icons left">group</i>Семья и люди</a></li>
+                <li class="tab"><a href="#tab-professions"><i class="material-icons left">work</i>Профессии</a></li>
+                <li class="tab"><a href="#tab-home"><i class="material-icons left">home</i>Дом и быт</a></li>
+                <li class="tab"><a href="#tab-city"><i class="material-icons left">location_city</i>Город и места</a>
+                </li>
+                <li class="tab"><a href="#tab-animals"><i class="material-icons left">pets</i>Животные и природа</a>
+                </li>
+                <li class="tab"><a href="#tab-time"><i class="material-icons left">schedule</i>Время и даты</a></li>
+                <li class="tab"><a href="#tab-food"><i class="material-icons left">restaurant</i>Еда и напитки</a></li>
+                <li class="tab"><a href="#tab-verbs"><i class="material-icons left">directions_run</i>Глаголы</a></li>
+                <li class="tab"><a href="#tab-phrases"><i class="material-icons left">chat</i>Местоимения и фразы</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Search Input Bar -->
+    <div class="card search-card z-depth-1">
+        <div class="card-content" style="padding: 15px 20px;">
+            <div class="input-field" style="margin: 0;">
+                <i class="material-icons prefix color-indigo">search</i>
+                <input id="word_search" onkeyup="filterWords()" placeholder="Быстрый поиск слова (на латышском или русском)..."
+                       type="text">
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 1: ANTONYMS -->
+    <div class="col s12 tab-content" id="tab-antonyms">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title">
+                <i class="material-icons medium orange-text text-darken-2">swap_horiz</i>
+                Прилагательные - Пары Антонимов
+            </h5>
+            <p class="grey-text text-darken-1">Наведите на слово для просмотра примера предложения.</p>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Слово A (Латышский)</th>
+                    <th>Перевод (Русский)</th>
+                    <th class="center-align">VS</th>
+                    <th class="center-align">Иконка</th>
+                    <th>Слово B (Латышский)</th>
+                    <th>Перевод (Русский)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">🐘</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šis dzīvoklis ir liels.">liels</span></td>
+                    <td>большой</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🐭</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Kaķis ir mazs.">mazs</span>
+                    </td>
+                    <td>маленький</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👴</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Šī māja ir veca.">vecs</span>
+                    </td>
+                    <td>старый</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">👶</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņš vēl ir jauns.">jauns</span></td>
+                    <td>новый / молодой</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🚀</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vilciens ir ātrs.">ātrs</span></td>
+                    <td>быстрый</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🐢</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Autobuss ir lēns.">lēns</span></td>
+                    <td>медленный</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧠</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņš ir gudrs students.">gudrs</span></td>
+                    <td>умный</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🤪</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tā ir muļķīga kļūda.">muļķīgs</span></td>
+                    <td>глупый</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⚡</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņš ir čakls darbinieks.">čakls</span></td>
+                    <td>трудолюбивый</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🛋️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šodien es esmu slinks.">slinks</span></td>
+                    <td>ленивый</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📢</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mūzika ir pārāk skaļa.">skaļš</span></td>
+                    <td>громкий</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🤫</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Šeit ir kluss.">kluss</span>
+                    </td>
+                    <td>тихий</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🔥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šodien ir silts laiks.">silts</span></td>
+                    <td>теплый</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">❄️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Ūdens ir auksts.">auksts</span>
+                    </td>
+                    <td>холодный</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🎨</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Grāmata ir interesanta.">interesants</span></td>
+                    <td>интересный</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🥱</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Filma bija garlaicīga.">garlaicīgs</span></td>
+                    <td>скучный</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📏</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šī iela ir garša.">garš</span></td>
+                    <td>длинный</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">📌</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Zīmulis ir īss.">īss</span>
+                    </td>
+                    <td>короткий</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌸</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Rīga ir skaista pilsēta.">skaists</span></td>
+                    <td>красивый</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">⚠️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Skats ir neglīts.">neglīts</span></td>
+                    <td>некрасивый</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💎</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šis auto ir dārgs.">dārgs</span></td>
+                    <td>дорогой</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🏷️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šī grāmata ir lēta.">lēts</span></td>
+                    <td>дешевый</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">😊</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tas ir labs cilvēks.">labs</span></td>
+                    <td>хороший</td>
+                    <td class="antonym-divider">↔</td>
+                    <td class="emoji-cell">🙁</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tas ir slikts ieradums.">slikts</span></td>
+                    <td>плохой</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 2: PEOPLE -->
+    <div class="col s12 tab-content" id="tab-people">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">group</i> 👨‍👩‍👧‍👦 Семья и люди
+            </h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">👨‍👧</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mans tēvs strādā birojā.">tēvs / tētis</span></td>
+                    <td>отец / папа</td>
+                    <td>Mans tēvs strādā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👩‍👦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mamma gatavo vakariņas.">māte / mamma</span></td>
+                    <td>мать / мама</td>
+                    <td>Mamma gatavo pusdienas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👨‍👩‍👧‍👦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mani vecāki dzīvo Latvijā.">vecāki</span></td>
+                    <td>родители</td>
+                    <td>Mani vecāki dzīvo Rīgā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Man ir dēls.">dēls</span></td>
+                    <td>сын</td>
+                    <td>Man ir dēls.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👧</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņa ir gudra meita.">meita</span></td>
+                    <td>дочка</td>
+                    <td>Viņa ir gudra meita.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mans brālis mācās skolā.">brālis</span></td>
+                    <td>брат</td>
+                    <td>Mans brālis mācās.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👧</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Māsa lasa grāmatu.">māsa</span></td>
+                    <td>сестра</td>
+                    <td>Māsa lasa grāmatu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧑</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Brālēns atbrauca ciemos.">brālēns</span></td>
+                    <td>кузен</td>
+                    <td>Brālēns atbrauca ciemos.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧑</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Māsīca dzīvo Liepājā.">māsīca</span></td>
+                    <td>кузина</td>
+                    <td>Māsīca dzīvo Londonā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧔</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Onkulis strādā par inženieri.">onkulis</span></td>
+                    <td>дядя</td>
+                    <td>Onkulis strādā par šoferi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👩‍🦱</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tante cep gardu kūku.">tante</span></td>
+                    <td>тетя</td>
+                    <td>Tante cep gardu pīrāgu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👴</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vectēvs lasa avīzi.">vectēvs / vectētiņš</span></td>
+                    <td>дедушка</td>
+                    <td>Vectēvs lasa avīzi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👵</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vecmāmiņa cep pīrāgus.">vecmāmiņa</span></td>
+                    <td>бабушка</td>
+                    <td>Vecmāmiņa adīja zeķes.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💍</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mans vīrs ir ārsts.">vīrs</span></td>
+                    <td>муж</td>
+                    <td>Mans vīrs ir inženieris.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💍</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mana sieva strādā skolā.">sieva</span></td>
+                    <td>жена</td>
+                    <td>Mana sieva ir skolotāja.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❤️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņa ir mīloša māte.">mīloša</span></td>
+                    <td>любящая</td>
+                    <td>Viņa ir mīloša māte.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">😇</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Bērns ir labi audzināts.">labi audzināta</span></td>
+                    <td>хорошо воспитанная</td>
+                    <td>Bērns ir labi audzināts.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💖</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Kaķēns ir mīlīgs.">mīlīga</span></td>
+                    <td>милая, ласковая</td>
+                    <td>Kaķēns ir ļoti mīlīgs.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🤝</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Skolotājs ir pacietīgs.">pacietīgs</span></td>
+                    <td>терпеливый</td>
+                    <td>Skolotājs ir pacietīgs.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">😌</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Mierīgs cilvēks.">mierīgs</span>
+                    </td>
+                    <td>спокойный</td>
+                    <td>Jūra šodien ir mierīga.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🎯</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Atbildīgs darbinieks.">atbildīgs</span></td>
+                    <td>ответственный</td>
+                    <td>Viņš ir atbildīgs darbinieks.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⭐</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Godīgs cilvēks.">godīgs</span>
+                    </td>
+                    <td>честный</td>
+                    <td>Tas bija godīgs gājiens.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🤲</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Izpalīdzīgs kaimiņš.">izpalīdzīgs</span></td>
+                    <td>отзывчивый</td>
+                    <td>Kaimiņš ir ļoti izpalīdzīgs.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">😄</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Jautrs zēns.">jautrs</span>
+                    </td>
+                    <td>веселый</td>
+                    <td>Mums bija jautrs vakars.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🥰</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Labsirdīga sieviete.">labsirdīga</span></td>
+                    <td>добродушная, добрая</td>
+                    <td>Viņa ir labsirdīga sieviete.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">😎</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Cilvēks ar labu humora izjūtu.">ar labu humora izjūtu</span></td>
+                    <td>с хорошим чувством юмора</td>
+                    <td>Mans draugs ir ar labu humora izjūtu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👧</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Meitene spēlējas.">meitene</span></td>
+                    <td>девочка, девушка</td>
+                    <td>Meitene zīmē.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Zēns skrien ātri.">zēns / zens</span></td>
+                    <td>мальчик</td>
+                    <td>Zēns skrien.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👩</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Sieviete pērk puķes.">sieviete</span></td>
+                    <td>женщина</td>
+                    <td>Sieviete pēk puķes.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👨</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Vīrietis strādā.">vīrietis</span>
+                    </td>
+                    <td>мужчина</td>
+                    <td>Vīrietis strādā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Jaunieši atpūšas.">jaunieši</span></td>
+                    <td>молодежь</td>
+                    <td>Jaunieši iet uz klubu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Ļaudis sapulcējās.">ļaudis</span></td>
+                    <td>народ</td>
+                    <td>Laukumā bija daudz ļaužu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌍</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Kāda ir tava tautība?">tautība</span></td>
+                    <td>национальность</td>
+                    <td>Kāda ir tava tautība?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👭</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Mana draudzene.">draudzene</span>
+                    </td>
+                    <td>подруга</td>
+                    <td>Mana draudzene mācās universitātē.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧑‍🤝‍🧑</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Ciemiņi nāk.">ciemiņi / viesi</span>
+                    </td>
+                    <td>гости</td>
+                    <td>Mums šodien ir ciemiņi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧔‍♂️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vīrietim ir ūsas.">ūsas</span></td>
+                    <td>усы</td>
+                    <td>Vīrietim ir melnas ūsas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💇‍♂️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņai ir gari mati.">mati</span></td>
+                    <td>волосы</td>
+                    <td>Man ir īsi mati.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 3: PROFESSIONS -->
+    <div class="col s12 tab-content" id="tab-professions">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">work</i> 💼 Профессии и
+                деятельность</h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">👔</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņš ir veiksmīgs uzņēmējs.">uzņēmējs</span></td>
+                    <td>предприниматель</td>
+                    <td>Viņš ir veiksmīgs uzņēmējs.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏢</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šis ir liels uzņēmums.">uzņēmums</span></td>
+                    <td>предприятие</td>
+                    <td>Šis ir liels uzņēmums.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧵</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šuvēja šuj kleitu.">šuvēja</span></td>
+                    <td>швея</td>
+                    <td>Šuvēja šuj kleitu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🩺</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Ārsts palīdz cilvēkiem.">ārsts</span></td>
+                    <td>врач</td>
+                    <td>Ārsts palīdz slimniekam.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏗️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Celtnieks būvē māju.">celtnieks</span></td>
+                    <td>строитель</td>
+                    <td>Celtnieks būvē māju.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🛒</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Pārdevējs strādā veikalā.">pārdevējs</span></td>
+                    <td>продавец</td>
+                    <td>Pārdevējs sver ābolus.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🎤</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Dziedātāja uzstājas.">dziedātāja</span></td>
+                    <td>певица</td>
+                    <td>Dziedātāja dzied skatuvē.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📊</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Grāmatvedis rēķina.">grāmatvedis</span></td>
+                    <td>бухгалтер</td>
+                    <td>Grāmatvedis rēķina nodokļus.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍽️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viesmīlis atnes kafiju.">viesmīlis</span></td>
+                    <td>официант</td>
+                    <td>Viesmīlis nes ēdienu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👔</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Pilsētā ir dažādas profesijas.">dažādas profesijas</span></td>
+                    <td>разные профессии</td>
+                    <td>Mums ir dažādas profesijas.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 4: HOME -->
+    <div class="col s12 tab-content" id="tab-home">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">home</i> 🏠 Дом, интерьер и
+                предметы</h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">🏢</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es īrēju dzīvokli.">dzīvoklis</span></td>
+                    <td>квартира</td>
+                    <td>Es īrēju dzīvokli.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🚪</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Istaba ir liela un gaiša.">istaba</span></td>
+                    <td>комната</td>
+                    <td>Istaba ir gaiša.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧱</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Siena ir balta.">siena</span>
+                    </td>
+                    <td>стена</td>
+                    <td>Siena ir baltā krāsā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🪟</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Atveriet logu.">logs</span>
+                    </td>
+                    <td>окно</td>
+                    <td>Atveriet logu, lūdzu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🪑</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Uz galda ir grāmata.">galds</span></td>
+                    <td>стол</td>
+                    <td>Galds stāv istabas vidū.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🔑</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Kur ir atslēga?">atslēga</span>
+                    </td>
+                    <td>ключ</td>
+                    <td>Kur ir mana atslēga?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📦</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Kaste ir smaga.">kaste</span>
+                    </td>
+                    <td>коробка</td>
+                    <td>Kaste ir pilna ar mantām.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧴</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Ūdens pudele.">pudele</span>
+                    </td>
+                    <td>бутылка</td>
+                    <td>Ūdens pudele ir uz galda.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👜</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mana soma ir jauna.">soma</span></td>
+                    <td>сумка</td>
+                    <td>Mana soma ir smaga.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👓</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Man vajag brilles.">brilles</span></td>
+                    <td>очки</td>
+                    <td>Man vajag brilles lasīšanai.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🖊️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Zīmulis ir uz galda.">zīmulis</span></td>
+                    <td>карандаш</td>
+                    <td>Zīmulis raksta labi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">✂️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Asas šķēres.">šķēres</span>
+                    </td>
+                    <td>ножницы</td>
+                    <td>Šķēres griež papīru.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧤</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Silti cimdi.">cimdi</span>
+                    </td>
+                    <td>перчатки</td>
+                    <td>Uzvelc cimdus, ir auksti.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧦</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Vilnas zeķes.">zeķes</span>
+                    </td>
+                    <td>носки</td>
+                    <td>Silta vilnas zeķes.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👖</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Ādas josta.">josta</span></td>
+                    <td>ремень</td>
+                    <td>Ādas josta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💰</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Man nav naudas.">nauda</span>
+                    </td>
+                    <td>деньги</td>
+                    <td>Man nav līdzi skaidras naudas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🎲</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mums patīk galda spēles.">galda spēles</span></td>
+                    <td>настольные игры</td>
+                    <td>Spēlēsim galda spēles.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🎮</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Bērni spēlē datorspēles.">datorspēles</span></td>
+                    <td>компьютерные игры</td>
+                    <td>Datorspēles ir interesantas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🎁</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tā ir skaista dāvana.">dāvana</span></td>
+                    <td>подарок</td>
+                    <td>Paldies par dāvanu!</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⚽</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Bumba ripo.">bumba</span></td>
+                    <td>мяч</td>
+                    <td>Zēns spēlējas ar bumbu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📰</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vectēvs lasa avīzi.">avīze</span></td>
+                    <td>газета</td>
+                    <td>Es pērku jaunāko avīzi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🚢</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Liels kuģis jūrā.">kuģis</span></td>
+                    <td>корабль</td>
+                    <td>Kuģis piestāj ostā.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 5: CITY -->
+    <div class="col s12 tab-content" id="tab-city">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">location_city</i> 🌆 Город и места
+            </h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">🏙️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Rīga ir skaista pilsēta.">pilsēta</span></td>
+                    <td>город</td>
+                    <td>Rīga ir liela pilsēta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏬</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Veikals strādā līdz desmitiem.">veikals</span></td>
+                    <td>магазин</td>
+                    <td>Veikalā var nopirkt maizi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">☕</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Kafejnīcā ir garda kafija.">kafejnīca</span></td>
+                    <td>кафе</td>
+                    <td>Mēs dzeram kafiju kafejnīcā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🚉</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vilciens atiet no stacijas.">stacija</span></td>
+                    <td>вокзал</td>
+                    <td>Vilciens pienāk stacijā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏨</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Mājīga viesnīca.">viesnīca</span>
+                    </td>
+                    <td>гостиница</td>
+                    <td>Viesnīca atrodas centrā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🅿️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Bezmaksas stāvvieta.">stāvvieta</span></td>
+                    <td>стоянка</td>
+                    <td>Automašīnu stāvvieta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⛪</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Sena baznīca.">baznīca</span>
+                    </td>
+                    <td>церковь</td>
+                    <td>Vecrīgā ir daudz baznīcu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Slimnīca ir tuvu.">slimnīca</span></td>
+                    <td>больница</td>
+                    <td>Slimnīca strādā visu diennakti.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🛠️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Darbnīca ir atvērta.">darbnīca</span></td>
+                    <td>мастерская</td>
+                    <td>Meistars strādā darbnīcā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧸</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Bērns iet uz bērnudārzu.">bērnudārzs</span></td>
+                    <td>детский сад</td>
+                    <td>Bērnudārzs ir netālu no mājas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍳</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Virtuve ir tīra.">virtuve</span>
+                    </td>
+                    <td>кухня</td>
+                    <td>Mēs ēdam virtuvē.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏡</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Liela ēka.">ēka</span></td>
+                    <td>здание</td>
+                    <td>Šī ēka ir ļoti veca.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📍</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Labi paziņota vieta.">vieta</span></td>
+                    <td>место</td>
+                    <td>Šī ir skaista vieta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🛣️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Žogs ap māju.">žogs</span>
+                    </td>
+                    <td>забор</td>
+                    <td>Koka žogs ap dārzu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌅</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Rietumos noriet saule.">rietumi</span></td>
+                    <td>запад</td>
+                    <td>Saule noriet rietumos.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 6: ANIMALS & NATURE -->
+    <div class="col s12 tab-content" id="tab-animals">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">pets</i> 🌲 Природа и животные</h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">🌳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Zaļa daba.">daba</span></td>
+                    <td>природа</td>
+                    <td>Latvijas daba ir gleznaina.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌲</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Augsts koks.">koks</span></td>
+                    <td>дерево</td>
+                    <td>Liels ozols ir sens koks.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌊</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Plata upe.">upe</span></td>
+                    <td>река</td>
+                    <td>Daugava ir liela upe.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌊</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Ventas ūdenskritums.">ūdenskritums</span></td>
+                    <td>водопад</td>
+                    <td>Ventas rumba ir skaists ūdenskritums.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🔥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Kurināt ugunskuru.">ugunskurs</span></td>
+                    <td>костер</td>
+                    <td>Pie jūras deg ugunskurs.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🛷</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Braukt ar ragavām.">ragavas</span></td>
+                    <td>санки</td>
+                    <td>Ziemā bērni brauc ar ragavām.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏖️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Smilšaina pludmale.">pludmale</span></td>
+                    <td>пляж</td>
+                    <td>Vasarā mēs esam pludmalē.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🦁</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Rīgas zoodārzs.">zoodārzs</span>
+                    </td>
+                    <td>зоопарк</td>
+                    <td>Bērniem patīk zoodārzs.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌻</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Zaļojošs dārzs.">dārzs</span>
+                    </td>
+                    <td>сад</td>
+                    <td>Dārzā zied ābeles.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌻</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Smaržīga puķe.">puķe</span>
+                    </td>
+                    <td>цветок</td>
+                    <td>Skaista puķe podiņā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐿️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Vāveres kokā.">vāveres</span>
+                    </td>
+                    <td>белки</td>
+                    <td>Parkā skraida vāveres.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Putni lido.">putni</span></td>
+                    <td>птицы</td>
+                    <td>Putni dzied kokos.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐢</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mazs bruņurupucis.">bruņurupucis</span></td>
+                    <td>черепаха</td>
+                    <td>Lēns bruņurupucis.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🦅</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Baltas stārķis.">stārķis</span>
+                    </td>
+                    <td>аист</td>
+                    <td>Stārķis ir Latvijas simbols.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐰</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Pūkains trusis.">trusis</span>
+                    </td>
+                    <td>кролик</td>
+                    <td>Trusis ēd burkānu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐓</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Skaļš gailis.">gailis</span>
+                    </td>
+                    <td>петух</td>
+                    <td>Gailis dzied no rīta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🕊️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Miera balodis.">balodis</span>
+                    </td>
+                    <td>голубь</td>
+                    <td>Balodis lido virs jumta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Zvirbulis uz zara.">zvirbulis</span></td>
+                    <td>воробей</td>
+                    <td>Mazs zvirbulis meklē graudus.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐾</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Bezšķirnes suns.">bezšķirnes</span>
+                    </td>
+                    <td>беспородный</td>
+                    <td>Mājas suns ir bezšķirnes.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏠</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Suns no patversmes.">no patversmes</span></td>
+                    <td>из приюта</td>
+                    <td>Kaķis ir ņemts no patversmes.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🐄</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Govs dod pienu.">govs</span>
+                    </td>
+                    <td>корова</td>
+                    <td>Govs ēd zāli pļavā.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 7: TIME -->
+    <div class="col s12 tab-content" id="tab-time">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">schedule</i> ⏰ Время, дни и
+                времена года</h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">📅</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Jauka diena.">diena</span>
+                    </td>
+                    <td>день</td>
+                    <td>Šī ir jauka diena.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌙</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vakar bija auksts.">vakar</span></td>
+                    <td>вчера</td>
+                    <td>Vakar mēs bijām kino.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">☀️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šodien ir saulains.">šodien</span></td>
+                    <td>сегодня</td>
+                    <td>Šodien ir saulains laiks.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌅</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Rīt būs piektdiena.">rīt</span></td>
+                    <td>завтра</td>
+                    <td>Rīt būs brīvdiena.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⏳</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Es tagad mācos.">tagad</span>
+                    </td>
+                    <td>сейчас</td>
+                    <td>Tagad es mācos latviešu valodu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⚡</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Pašlaik strādāju.">pašlaik</span></td>
+                    <td>в данный момент</td>
+                    <td>Pašlaik es strādāju.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⏳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Agrāk dzīvoju šeit.">agrāk</span></td>
+                    <td>раньше</td>
+                    <td>Agrāk es dzīvoju citā pilsētā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🗓️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Pagāja mēnesis.">mēnesis</span>
+                    </td>
+                    <td>месяц</td>
+                    <td>Pāriet viens mēnesis.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🗓️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Vasaras mēneši.">mēneši</span>
+                    </td>
+                    <td>месяцы</td>
+                    <td>Vasaras mēneši.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❄️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Auksts janvāris.">janvāris</span>
+                    </td>
+                    <td>январь</td>
+                    <td>Janvārī ir auksts.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📅</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Pirma darba diena.">pirmdiena</span></td>
+                    <td>понедельник</td>
+                    <td>Pirmdiena ir darba diena.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📅</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Otrdien ir nodarbība.">otrdiena</span></td>
+                    <td>вторник</td>
+                    <td>Otrdien man ir treniņš.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📅</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Nedēļas beigas.">piektdiena</span>
+                    </td>
+                    <td>пятница</td>
+                    <td>Piektdiena ir mana mīļākā diena.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📅</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Svētdien atpūšamies.">svētdiena</span></td>
+                    <td>воскресенье</td>
+                    <td>Svētdien mēs atpūšamies.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌍</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Četri gadalaiki.">gadalaiks</span>
+                    </td>
+                    <td>время года</td>
+                    <td>Kāds ir tavs mīļākais gadalaiks?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌱</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Silts pavasaris.">pavasaris</span>
+                    </td>
+                    <td>весна</td>
+                    <td>Pavasarī zied puķes.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">☀️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Karsta vasara.">vasara</span>
+                    </td>
+                    <td>лето</td>
+                    <td>Vasarā ir karsts.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍂</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Lietains rudens.">rudens</span>
+                    </td>
+                    <td>осень</td>
+                    <td>Rudenī krīt lapas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⏳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tiksimies pēc diviem gadiem.">pēc diviem gadiem</span></td>
+                    <td>через два года</td>
+                    <td>Mēs tiksimies pēc diviem gadiem.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⏳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tas bija pirms diviem gadiem.">pirms diviem gadiem</span></td>
+                    <td>два года назад</td>
+                    <td>Pirms diviem gadiem es biju Rīgā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📱</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Kāds ir tavs tālruņa numurs?">tālruņa numurs</span></td>
+                    <td>номер телефона</td>
+                    <td>Pieraksti manu tālruņa numuru.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📖</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šodien ir pirma nodarbība.">nodarbība</span></td>
+                    <td>занятие</td>
+                    <td>Nodarbība sākas laicīgi.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 8: FOOD -->
+    <div class="col s12 tab-content" id="tab-food">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">restaurant</i> 🍲 Еда, напитки и
+                лакомства</h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">🍰</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Salda kūka.">kūka</span></td>
+                    <td>пирожное / торт</td>
+                    <td>Šī kūka ir ļoti salda.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍨</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Garšīgs saldējums.">saldējums</span></td>
+                    <td>мороженое</td>
+                    <td>Atsvaidzinošs saldējums karstā dienā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍓</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Zemeņu ievārījums.">ievārījums</span></td>
+                    <td>варенье</td>
+                    <td>Zemeņu ievārījums ar pankūkām.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌰</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Chutni valrieksti.">valrieksts</span></td>
+                    <td>грецкий орех</td>
+                    <td>Valrieksti ir veselīgi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🟢</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Zaļie zirņi.">zirņi</span>
+                    </td>
+                    <td>горох</td>
+                    <td>Pelēkie zirņi ar speķi.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 9: VERBS -->
+    <div class="col s12 tab-content" id="tab-verbs">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">directions_run</i> 🏃 Глаголы и
+                действия</h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">💤</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Bērns nevar aizmigt.">aizmigt</span></td>
+                    <td>заснуть, засыпать</td>
+                    <td>Es gribu aizmigt.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🛒</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Ejam iepirkties veikalā.">iepirkties</span></td>
+                    <td>делать покупки</td>
+                    <td>Mēs ejam iepirkties.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💼</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņš strādā katru dienu.">strādāt</span></td>
+                    <td>работать</td>
+                    <td>Viņš strādā birojā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📚</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es mācos augstskolā.">mācos</span></td>
+                    <td>учусь</td>
+                    <td>Es mācos latviešu valodu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👨‍🏫</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Es mācu bērnus.">mācu</span>
+                    </td>
+                    <td>обучаю</td>
+                    <td>Es mācu studentus.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🗣️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Runāt latviski.">runāt</span>
+                    </td>
+                    <td>говорить</td>
+                    <td>Runājiet lēnāk, lūdzu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💭</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es domāju par darbu.">domāt</span></td>
+                    <td>думать</td>
+                    <td>Es domāju par tevi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Jautāt ceļu.">jautāt</span>
+                    </td>
+                    <td>спрашивать</td>
+                    <td>Skolēns jautā skolotājam.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🎮</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Spēlēt spēles.">spēlēt</span>
+                    </td>
+                    <td>играть</td>
+                    <td>Bērni spēlē futbolu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">♟️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Bērns spēlējas.">spēlēties</span>
+                    </td>
+                    <td>играться</td>
+                    <td>Kaķēns spēlējas ar bumbu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏖️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Sauļoties pludmalē.">sauļoties</span></td>
+                    <td>загорать</td>
+                    <td>Vasarā visi sauļojas pludmalē.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Gatavot pusdienas.">gatavot</span></td>
+                    <td>готовить</td>
+                    <td>Mamma gatavo vakariņas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📋</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Gatavoties eksāmenam.">gatavoties</span></td>
+                    <td>готовиться</td>
+                    <td>Es gatavojos nodarbībai.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📷</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Fotografēt dabu.">fotografēt</span>
+                    </td>
+                    <td>фотографировать</td>
+                    <td>Man patīk fotografēt.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📸</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Fotografēties kopā.">fotografēties</span></td>
+                    <td>фотографироваться</td>
+                    <td>Mēs fotografējamies pie pieminekļa.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧼</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Mazgāt rokās.">mazgāt</span>
+                    </td>
+                    <td>мыть</td>
+                    <td>Mazgāt traukus virtuvē.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🚿</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mazgāties no rīta.">mazgāties</span></td>
+                    <td>мыться</td>
+                    <td>Viņš mazgājas dušā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🗣️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Pļāpāt ar draugiem.">pļāpāt</span></td>
+                    <td>болтать</td>
+                    <td>Meitenes pļāpā pa telefonu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🚶</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Staigāt pa parku.">staigāt</span></td>
+                    <td>гулять</td>
+                    <td>Staigāt pa parku.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">✈️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Lidot uz Rīgu.">lidot</span>
+                    </td>
+                    <td>летать</td>
+                    <td>Putni lido uz dienvidiem.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🧳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Ceļot pa pasauli.">ceļot</span></td>
+                    <td>путешествовать</td>
+                    <td>Man patīk ceļot.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏠</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Dzīvot Rīgā.">dzīvot</span>
+                    </td>
+                    <td>жить</td>
+                    <td>Es dzīvoju Rīgā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Maksāt par pirkumu.">maksāt</span></td>
+                    <td>платить</td>
+                    <td>Maksāt par pirkumu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📅</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Plānot atvaļinājumu.">plānot</span></td>
+                    <td>планировать</td>
+                    <td>Plānot nedēļas nogali.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👀</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Rādīt bildes.">rādīt</span>
+                    </td>
+                    <td>показывать</td>
+                    <td>Rādīt jaunu ceļu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❤️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Mīlēt savu ģimeni.">mīlēt</span></td>
+                    <td>любить</td>
+                    <td>Mīlēt savu dzimteni.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🥐</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Brokastot astoņos.">brokastot</span></td>
+                    <td>завтракать</td>
+                    <td>Mēs brokastojam no rīta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍲</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Pusdienot kafejnīcā.">pusdienot</span></td>
+                    <td>обедать</td>
+                    <td>Es dodos pusdienot.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🍽️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Vakariņot mājās.">vakariņot</span>
+                    </td>
+                    <td>ужинать</td>
+                    <td>Mēs vakariņojam kopā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⚽</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Sportot katru dienu.">sportot</span></td>
+                    <td>заниматься спортом</td>
+                    <td>Viņam patīk sportot.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🤸</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Nodarboties ar jogu.">nodarboties</span></td>
+                    <td>заниматься</td>
+                    <td>Nodarboties ar sportu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📖</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Lasīt grāmatu.">lasīt</span>
+                    </td>
+                    <td>читать</td>
+                    <td>Es lasu interesantu grāmatu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">✍️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Rakstīt vēstuli.">rakstīt</span>
+                    </td>
+                    <td>писать</td>
+                    <td>Viņš raksta ziņu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🤝</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es iepazinos ar viņu.">iepazinos</span></td>
+                    <td>познакомился / познакомилась</td>
+                    <td>Es iepazinos ar jaunu kaimiņu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🚗</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es atbraucu vakar.">atbraucu</span></td>
+                    <td>приехал / приехала</td>
+                    <td>Es atbraucu no citas valsts.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🤝</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es draudzējos ar kaimiņu.">draudzējos</span></td>
+                    <td>дружу</td>
+                    <td>Es draudzējos ar koleģiem.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏁</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es sāku mācīties.">sāku</span></td>
+                    <td>начал / начала</td>
+                    <td>Es sāku jaunu darbu.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 10: PHRASES & PRONOUNS -->
+    <div class="col s12 tab-content" id="tab-phrases">
+        <div class="card-panel white z-depth-1">
+            <h5 class="card-panel-title"><i class="material-icons medium indigo-text">chat</i> 💬 Местоимения, вопросы и
+                полезные фразы</h5>
+            <table class="highlight responsive-table striped">
+                <thead>
+                <tr class="indigo lighten-5 indigo-text text-darken-4">
+                    <th class="center-align">Иконка</th>
+                    <th>Латышский</th>
+                    <th>Перевод</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="emoji-cell">🤝</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Ejam kopā.">kopā</span></td>
+                    <td>вместе</td>
+                    <td>Mēs strādājam kopā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">➕</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es arī būšu.">arī</span></td>
+                    <td>тоже</td>
+                    <td>Es arī gribu iet.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📍</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Nāc te!">te</span>
+                    </td>
+                    <td>тут</td>
+                    <td>Es esmu te.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📍</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Draugs ir tur.">tur</span>
+                    </td>
+                    <td>там</td>
+                    <td>Veikals ir tur.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👉</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Darām tā.">tā</span></td>
+                    <td>так</td>
+                    <td>Dari tā!</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⏱️</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Tad tiekamies.">tad</span>
+                    </td>
+                    <td>тогда</td>
+                    <td>Tad mēs tiksimies.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💡</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Tāpēc es kavēju.">tāpēc</span>
+                    </td>
+                    <td>поэтому</td>
+                    <td>Līst lietus, tāpēc es eju ar lietussargu.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tāpēc ka ir auksts.">tāpēc ka</span></td>
+                    <td>потому что</td>
+                    <td>Es palieku mājās, tāpēc ka esmu slims.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⏳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Tikai viena minūte.">tikai</span></td>
+                    <td>только</td>
+                    <td>Man ir tikai viena biļete.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">⏳</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Nebūs ilgi.">ilgi</span></td>
+                    <td>долго</td>
+                    <td>Negaidi mani ilgi.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👌</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Zinu mazliet.">mazliet</span>
+                    </td>
+                    <td>немножко</td>
+                    <td>Es mazliet runāju latviski.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🌟</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Lieliski nostrādāts!">lieliski</span></td>
+                    <td>великолепно</td>
+                    <td>Lieliski! Paldies par palīdzību.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💍</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņš ir precējies.">precējies</span></td>
+                    <td>женат</td>
+                    <td>Mans brālis ir precējies.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🏆</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Šī ir mana mīļākā grāmata.">mīļākā</span></td>
+                    <td>любимая</td>
+                    <td>Kāda ir tava mīļākā krāsa?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">☝️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Vispirms paēdīsim.">vispirms</span></td>
+                    <td>прежде всего, для начала</td>
+                    <td>Vispirms nomazgā rokas.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Kad tu būsi mājās?">kad?</span></td>
+                    <td>когда?</td>
+                    <td>Kad tu atbrauksi?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Kāpēc tu kavē?">kāpēc</span>
+                    </td>
+                    <td>почему</td>
+                    <td>Kāpēc tu klusē?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Cikos sākas darbs?">cikos</span></td>
+                    <td>во сколько?</td>
+                    <td>Cikos sākas filma?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Uz kurieni tu eji?">uz kurieni</span></td>
+                    <td>куда?</td>
+                    <td>Uz kurieni tu dodies?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: No kurienes viņš ir?">no kurienes</span></td>
+                    <td>откуда?</td>
+                    <td>No kurienes tu esi?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">❓</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Kam pieder šis?">kam</span>
+                    </td>
+                    <td>кому?</td>
+                    <td>Kam tu dod šo grāmatu?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">💶</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Cik maksā biļete?">cik maksā?</span></td>
+                    <td>сколько стоит?</td>
+                    <td>Cik maksā šī kafija?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👋</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Sveiks! Kā klājas?">Kā klājas?</span></td>
+                    <td>как поживаете?</td>
+                    <td>Sveiki! Kā klājas?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🗣️</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Neprotu ātri. Runājiet lūdzu lēnāk.">Runājiet lūdzu lēnāk</span>
+                    </td>
+                    <td>говорите пожалуйста медленнее</td>
+                    <td>Lūdzu, runājiet lēnāk.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🔁</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Es nesapratu. Atkārtojiet lūdzu.">Atкārtojiet lūdzu</span></td>
+                    <td>повторите пожалуйста</td>
+                    <td>Atkārtojiet lūdzu vēlreiz.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņai patīk zīmēt.">viņai patīk / viņai ir</span></td>
+                    <td>ей нравится / у нее есть</td>
+                    <td>Viņai patīk mūzika. Viņai ir kaķis.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņam patīk sportot.">viņam patīk / viņam ir</span></td>
+                    <td>ему нравится / у него есть</td>
+                    <td>Viņam ir jauna mašīna.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņām patīk ceļot.">viņām patīk / viņām ir</span></td>
+                    <td>им нравится (ж.р) / у них есть</td>
+                    <td>Viņām patīk dejot.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👥</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Viņiem patīk futbols.">viņiem patīk / viņiem ir</span></td>
+                    <td>им нравится / у них есть</td>
+                    <td>Viņiem ir liels dzīvoklis.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">👥</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Mums patīk Rīga.">mums patīk / mums ir</span>
+                    </td>
+                    <td>нам нравится / у нас есть</td>
+                    <td>Mums ir labs skolotājs.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🔹</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Kāds ir amats?">kāds / kāda</span>
+                    </td>
+                    <td>какой / какая</td>
+                    <td>Kāda ir tava adrese?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🔹</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Kādi ir jautājumi?">kādi / kādas</span></td>
+                    <td>какие</td>
+                    <td>Kādi augļi tev garšo?</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🔹</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Kurš no viņiem?">kurš / kuras / kuri</span>
+                    </td>
+                    <td>который / которые</td>
+                    <td>Cilvēki, kuri strādā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">📦</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Rīt būs piektdiena.">būs</span></td>
+                    <td>будет</td>
+                    <td>Rīt būs labs laiks.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">➕</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Pērkam augļus utt.">un tā tālāk (utt.)</span></td>
+                    <td>и так далее (и т.д.)</td>
+                    <td>Āboli, bumbieri un tā tālāk.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🇦🇱</td>
+                    <td><span class="word-badge tooltipped" data-position="top" data-tooltip="Пример: Braukt uz Īriju.">Īrija</span>
+                    </td>
+                    <td>Ирландия</td>
+                    <td>Es biju Īrijā.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🇫🇮</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Somija ir kaimiņvalsts.">Somija</span></td>
+                    <td>Финляндия</td>
+                    <td>Somija robežojas ar Krieviju.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🇸🇪</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Zviedrija atrodas ziemeļos.">Zviedrija</span></td>
+                    <td>Швеция</td>
+                    <td>Kuģis brauc uz Zviedriju.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🇲🇪</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Melnkalne ir pie jūras.">Melnkalne</span></td>
+                    <td>Черногория</td>
+                    <td>Melnkalne ir kalnaina valsts.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🇺🇸</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Dzīvot ASV.">ASV</span></td>
+                    <td>США</td>
+                    <td>ASV ir liela valsts.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🇪🇪</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Igaunija ir ziemeļos.">Igaunija</span></td>
+                    <td>Эстония</td>
+                    <td>Tallina ir Igaunijas galvaspilsēta.</td>
+                </tr>
+                <tr>
+                    <td class="emoji-cell">🇩🇪</td>
+                    <td><span class="word-badge tooltipped" data-position="top"
+                              data-tooltip="Пример: Braukt uz Vāciju.">Vācija</span></td>
+                    <td>Германия</td>
+                    <td>Berlinē ir daudz muzeju.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<!-- Materialize JavaScript CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    function initMaterializeComponents() {
+        var tabs = document.querySelectorAll('.tabs');
+        if (tabs.length > 0) {
+            M.Tabs.init(tabs);
+        }
+
+        var tooltips = document.querySelectorAll('.tooltipped');
+        if (tooltips.length > 0) {
+            M.Tooltip.init(tooltips);
+        }
+    }
+
+    // Проверяем состояние документа и инициализируем сразу или по событию
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        initMaterializeComponents();
+    } else {
+        document.addEventListener('DOMContentLoaded', initMaterializeComponents);
+    }
+
+    // Страховка для iframe в Google Sites
+    window.addEventListener('load', function () {
+        setTimeout(initMaterializeComponents, 100);
+    });
+
+    // Функция универсального поиска по всем строкам таблиц
+    function filterWords() {
+        var input = document.getElementById('word_search');
+        var filter = input.value.toLowerCase();
+        var rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(function (row) {
+            var text = row.textContent.toLowerCase();
+            if (text.indexOf(filter) > -1) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+</script>
+</body>
+</html>
