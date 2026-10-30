@@ -134,6 +134,16 @@
             cursor: pointer;
         }
 
+        .category-chip {
+            display: inline-block;
+            font-size: 0.78rem;
+            background-color: #e8eaf6;
+            color: #3f51b5;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
         .antonym-divider {
             color: #e65100;
             font-weight: bold;
@@ -244,6 +254,11 @@
                 margin-top: 4px;
                 font-size: 0.95rem;
                 color: #333;
+            }
+
+            .vocab-table.standard-table td.category-cell {
+                display: block;
+                margin-top: 4px;
             }
 
             .vocab-table.standard-table td.example-cell {
@@ -396,14 +411,59 @@
         }
     }
 
+    function buildAllTab(tabs) {
+        const allItems = [];
+        tabs.forEach(tab => {
+            if (tab.type === 'antonyms') {
+                tab.items.forEach(item => {
+                    allItems.push({
+                        icon: item.icon_a,
+                        word: item.word_a,
+                        translation: item.translation_a,
+                        example: item.example_a,
+                        category: tab.title
+                    });
+                    allItems.push({
+                        icon: item.icon_b,
+                        word: item.word_b,
+                        translation: item.translation_b,
+                        example: item.example_b,
+                        category: tab.title
+                    });
+                });
+            } else {
+                tab.items.forEach(item => {
+                    allItems.push({
+                        ...item,
+                        category: tab.title
+                    });
+                });
+            }
+        });
+
+        return {
+            id: 'tab-all',
+            title: 'Все',
+            icon: 'apps',
+            card_title: 'Все слова и выражения',
+            description: 'Полный список всех слов из всех категорий.',
+            type: 'standard',
+            show_category: true,
+            items: allItems
+        };
+    }
+
     function renderTabs(tabs) {
         const navList = document.getElementById('tabs-header-list');
         const contentContainer = document.getElementById('tabs-content-container');
 
+        const allTab = buildAllTab(tabs);
+        const fullTabs = [allTab, ...tabs];
+
         let navHtml = '';
         let contentHtml = '';
 
-        tabs.forEach((tab, index) => {
+        fullTabs.forEach((tab, index) => {
             const activeClass = index === 0 ? 'active' : '';
             navHtml += `
                 <li class="tab">
@@ -423,7 +483,7 @@
                             ${escapeHtml(displayTitle)}
                         </h5>
                         ${tab.description ? `<p class="grey-text text-darken-1">${escapeHtml(tab.description)}</p>` : ''}
-                        ${tab.type === 'antonyms' ? renderAntonymsTable(tab.items) : renderStandardTable(tab.items)}
+                        ${tab.type === 'antonyms' ? renderAntonymsTable(tab.items) : renderStandardTable(tab.items, tab.show_category)}
                     </div>
                 </div>
             `;
@@ -472,20 +532,24 @@
         `;
     }
 
-    function renderStandardTable(items) {
+    function renderStandardTable(items, showCategory = false) {
         let rowsHtml = '';
         items.forEach(item => {
             const tooltip = item.example ? `data-position="top" data-tooltip="Пример: ${escapeHtml(item.example)}"` : '';
+            const categoryHtml = showCategory && item.category ? `<td class="category-cell"><span class="category-chip">${escapeHtml(item.category)}</span></td>` : '';
 
             rowsHtml += `
                 <tr>
                     <td class="emoji-cell">${escapeHtml(item.icon || '')}</td>
                     <td class="word-cell"><span class="word-badge ${tooltip ? 'tooltipped' : ''}" ${tooltip}>${escapeHtml(item.word)}</span></td>
                     <td class="trans-cell">${escapeHtml(item.translation)}</td>
+                    ${categoryHtml}
                     <td class="example-cell"><span class="example-text">${escapeHtml(item.example || '')}</span></td>
                 </tr>
             `;
         });
+
+        const categoryTh = showCategory ? `<th>Категория</th>` : '';
 
         return `
             <table class="highlight vocab-table standard-table striped">
@@ -494,6 +558,7 @@
                         <th class="center-align">Иконка</th>
                         <th>Латышский</th>
                         <th>Перевод</th>
+                        ${categoryTh}
                         <th>Пример</th>
                     </tr>
                 </thead>
