@@ -65,6 +65,11 @@
             position: relative !important;
         }
 
+        /* Кнопка свёрнутого меню вкладок для мобильных устройств */
+        .tabs-toggle-btn {
+            display: none;
+        }
+
         /* Стили для табов */
         .tabs.tabs-transparent {
             display: flex;
@@ -189,6 +194,42 @@
 
         /* Мобильная адаптация: расположение элементов по строкам без горизонтального скролла */
         @media only screen and (max-width: 600px) {
+            .tabs-toggle-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: rgba(255, 255, 255, 0.18);
+                padding: 6px 12px;
+                border-radius: 6px;
+                margin-top: 8px;
+                color: #fff;
+                font-weight: 500;
+                font-size: 0.88rem;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .tabs-toggle-btn .toggle-title {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .tabs-toggle-btn .toggle-title i {
+                font-size: 1.1rem;
+            }
+
+            .nav-tabs-wrapper {
+                display: none;
+            }
+
+            .nav-tabs-wrapper.expanded {
+                display: block;
+            }
+
             .nav-container {
                 width: 100%;
                 padding: 0 8px;
@@ -309,8 +350,17 @@
                 <span>Латышский язык - Шпаргалка из словаря Edvibe</span>
             </div>
             <span class="subtitle-info" id="module-info-text">(Загрузка данных...)</span>
+
+            <!-- Мобильная плашка переключателя вкладок -->
+            <div class="tabs-toggle-btn" id="tabs-toggle-btn" onclick="toggleTabs()">
+                <div class="toggle-title">
+                    <i class="material-icons" id="active-tab-icon">apps</i>
+                    <span id="active-tab-label">Вкладка: Все</span>
+                </div>
+                <i class="material-icons" id="tabs-toggle-icon">expand_more</i>
+            </div>
         </div>
-        <div class="nav-content">
+        <div class="nav-content nav-tabs-wrapper" id="nav-tabs-wrapper">
             <ul class="tabs tabs-transparent" id="tabs-header-list">
                 <!-- Вкладки генерируются динамически -->
             </ul>
@@ -375,6 +425,47 @@
         }
     }
 
+    function toggleTabs() {
+        const wrapper = document.getElementById('nav-tabs-wrapper');
+        const toggleIcon = document.getElementById('tabs-toggle-icon');
+        if (!wrapper) return;
+        wrapper.classList.toggle('expanded');
+        if (toggleIcon) {
+            toggleIcon.textContent = wrapper.classList.contains('expanded') ? 'expand_less' : 'expand_more';
+        }
+    }
+
+    function setupTabsToggle() {
+        const headerList = document.getElementById('tabs-header-list');
+        if (!headerList) return;
+
+        headerList.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+
+            const iconElem = link.querySelector('i.material-icons');
+            const iconText = iconElem ? iconElem.textContent.trim() : 'apps';
+
+            let labelText = link.textContent.trim();
+            if (iconElem) {
+                labelText = labelText.replace(iconElem.textContent.trim(), '').trim();
+            }
+
+            const activeIconElem = document.getElementById('active-tab-icon');
+            const activeLabelElem = document.getElementById('active-tab-label');
+
+            if (activeIconElem) activeIconElem.textContent = iconText;
+            if (activeLabelElem) activeLabelElem.textContent = 'Вкладка: ' + labelText;
+
+            const wrapper = document.getElementById('nav-tabs-wrapper');
+            const toggleIcon = document.getElementById('tabs-toggle-icon');
+            if (wrapper && wrapper.classList.contains('expanded')) {
+                wrapper.classList.remove('expanded');
+                if (toggleIcon) toggleIcon.textContent = 'expand_more';
+            }
+        });
+    }
+
     async function loadVocabularyData() {
         try {
             const response = await fetch('lv-edvibe-data.json');
@@ -385,6 +476,7 @@
             renderHeaderInfo(vocabularyData);
             renderTabs(vocabularyData.tabs);
             initMaterializeComponents();
+            setupTabsToggle();
         } catch (error) {
             console.error('Ошибка загрузки JSON:', error);
             document.getElementById('tabs-content-container').innerHTML = `
