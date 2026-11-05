@@ -466,19 +466,90 @@
         });
     }
 
+    function mergeVocabularyDatasets(datasets) {
+        const mergedCategories = [];
+        const categoryMap = new Map();
+        let lastUpdated = '';
+        let moduleInfo = '';
+
+        datasets.forEach(data => {
+            if (data.last_updated) lastUpdated = data.last_updated;
+            if (data.module_info) moduleInfo = data.module_info;
+
+            const cats = data.categories || data.tabs || [];
+            cats.forEach(cat => {
+                const name = cat.name || cat.title;
+                const items = cat.items || [];
+
+                if (categoryMap.has(name)) {
+                    const existingCat = categoryMap.get(name);
+                    existingCat.items.push(...items);
+                    if (cat.description && !existingCat.description) existingCat.description = cat.description;
+                    if (cat.card_title && !existingCat.card_title) existingCat.card_title = cat.card_title;
+                } else {
+                    const newCat = {
+                        name: name,
+                        icon: cat.icon || 'folder',
+                        type: cat.type || 'standard',
+                        card_title: cat.card_title || null,
+                        description: cat.description || null,
+                        items: [...items]
+                    };
+                    categoryMap.set(name, newCat);
+                    mergedCategories.push(newCat);
+                }
+            });
+        });
+
+        return {
+            last_updated: lastUpdated,
+            module_info: moduleInfo,
+            categories: mergedCategories
+        };
+    }
+
+    async function fetchJsonIfExists(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) return null;
+            return await response.json();
+        } catch (e) {
+            return null;
+        }
+    }
+
     async function loadVocabularyData() {
         try {
-            const response = await fetch('lv-edvibe-data.json');
-            if (!response.ok) {
-                throw new Error('Не удалось загрузить данные JSON (' + response.status + ')');
+            const datasets = [];
+
+            // 1. Загрузка основного файла
+            const baseData = await fetchJsonIfExists('lv-edvibe-data.json');
+            if (baseData) {
+                datasets.push(baseData);
             }
-            vocabularyData = await response.json();
+
+            // 2. Автоматическая загрузка файлов с номерами: lv-edvibe-data-1.json, lv-edvibe-data-2.json ...
+            let fileIndex = 1;
+            while (true) {
+                const numberedData = await fetchJsonIfExists(`lv-edvibe-data-${fileIndex}.json`);
+                if (!numberedData) {
+                    break;
+                }
+                datasets.push(numberedData);
+                fileIndex++;
+            }
+
+            if (datasets.length === 0) {
+                throw new Error('Файлы данных не найдены');
+            }
+
+            vocabularyData = mergeVocabularyDatasets(datasets);
             renderHeaderInfo(vocabularyData);
-            renderTabs(vocabularyData.tabs);
+            renderCategories(vocabularyData.categories);
             initMaterializeComponents();
             setupTabsToggle();
         } catch (error) {
-            console.error('Ошибка загрузки JSON:', error);
+            console.error('Ошибка загрузки данных:', error);
             document.getElementById('tabs-content-container').innerHTML = `
                 <div class="card-panel red lighten-4 red-text text-darken-4">
                     <i class="material-icons left">error</i>
@@ -503,39 +574,40 @@
         }
     }
 
-    function buildAllTab(tabs) {
+    function buildAllCategory(categories) {
         const allItems = [];
-        tabs.forEach(tab => {
-            if (tab.type === 'antonyms') {
-                tab.items.forEach(item => {
+        categories.forEach(cat => {
+            const catName = cat.name || cat.title;
+            if (cat.type === 'antonyms') {
+                cat.items.forEach(item => {
                     allItems.push({
                         icon: item.icon_a,
                         word: item.word_a,
                         translation: item.translation_a,
                         example: item.example_a,
-                        category: tab.title
+                        category: catName
                     });
                     allItems.push({
                         icon: item.icon_b,
                         word: item.word_b,
                         translation: item.translation_b,
                         example: item.example_b,
-                        category: tab.title
+                        category: catName
                     });
                 });
             } else {
-                tab.items.forEach(item => {
+                cat.items.forEach(item => {
                     allItems.push({
                         ...item,
-                        category: tab.title
+                        category: catName
                     });
                 });
             }
         });
 
         return {
-            id: 'tab-all',
-            title: 'Все',
+            id: 'cat-all',
+            name: 'Все',
             icon: 'apps',
             card_title: 'Все слова и выражения',
             description: 'Полный список всех слов из всех категорий.',
@@ -545,37 +617,39 @@
         };
     }
 
-    function renderTabs(tabs) {
+    function renderCategories(categories) {
         const navList = document.getElementById('tabs-header-list');
         const contentContainer = document.getElementById('tabs-content-container');
 
-        const allTab = buildAllTab(tabs);
-        const fullTabs = [allTab, ...tabs];
+        const allCategory = buildAllCategory(categories);
+        const fullCategories = [allCategory, ...categories];
 
         let navHtml = '';
         let contentHtml = '';
 
-        fullTabs.forEach((tab, index) => {
+        fullCategories.forEach((cat, index) => {
             const activeClass = index === 0 ? 'active' : '';
+            const catId = cat.id || `cat-${index}`;
+            const catName = cat.name || cat.title;
+            const displayTitle = cat.card_title || catName;
+
             navHtml += `
                 <li class="tab">
-                    <a class="${activeClass}" href="#${escapeHtml(tab.id)}">
-                        <i class="material-icons left">${escapeHtml(tab.icon)}</i>${escapeHtml(tab.title)}
+                    <a class="${activeClass}" href="#${escapeHtml(catId)}">
+                        <i class="material-icons left">${escapeHtml(cat.icon)}</i>${escapeHtml(catName)}
                     </a>
                 </li>
             `;
 
-            const displayTitle = tab.card_title || tab.title;
-
             contentHtml += `
-                <div class="col s12 tab-content" id="${escapeHtml(tab.id)}">
+                <div class="col s12 tab-content" id="${escapeHtml(catId)}">
                     <div class="card-panel white z-depth-1">
                         <h5 class="card-panel-title">
-                            <i class="material-icons medium ${tab.type === 'antonyms' ? 'orange-text text-darken-2' : 'indigo-text'}">${escapeHtml(tab.icon)}</i>
+                            <i class="material-icons medium ${cat.type === 'antonyms' ? 'orange-text text-darken-2' : 'indigo-text'}">${escapeHtml(cat.icon)}</i>
                             ${escapeHtml(displayTitle)}
                         </h5>
-                        ${tab.description ? `<p class="grey-text text-darken-1">${escapeHtml(tab.description)}</p>` : ''}
-                        ${tab.type === 'antonyms' ? renderAntonymsTable(tab.items) : renderStandardTable(tab.items, tab.show_category)}
+                        ${cat.description ? `<p class="grey-text text-darken-1">${escapeHtml(cat.description)}</p>` : ''}
+                        ${cat.type === 'antonyms' ? renderAntonymsTable(cat.items) : renderStandardTable(cat.items, cat.show_category)}
                     </div>
                 </div>
             `;
