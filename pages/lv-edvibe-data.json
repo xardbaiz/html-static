@@ -1,14 +1,13 @@
 {
   "last_updated": "29.10.2026",
   "module_info": "По состоянию на конец модуля №14",
-  "tabs": [
+  "categories": [
     {
-      "id": "tab-antonyms",
-      "title": "Антонимы",
+      "name": "Антонимы",
       "icon": "compare_arrows",
+      "type": "antonyms",
       "card_title": "Прилагательные - Пары Антонимов",
       "description": "Наведите на слово для просмотра примера предложения.",
-      "type": "antonyms",
       "items": [
         {
           "word_a": "liels",
@@ -133,12 +132,8 @@
       ]
     },
     {
-      "id": "tab-people",
-      "title": "Семья и люди",
+      "name": "Семья и люди",
       "icon": "group",
-      "card_title": "Семья и люди",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "👨‍👧",
@@ -365,12 +360,9 @@
       ]
     },
     {
-      "id": "tab-professions",
-      "title": "Профессии",
+      "name": "Профессии",
       "icon": "work",
       "card_title": "Профессии и деятельность",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "👔",
@@ -435,12 +427,9 @@
       ]
     },
     {
-      "id": "tab-home",
-      "title": "Дом и быт",
+      "name": "Дом и быт",
       "icon": "home",
       "card_title": "Дом, интерьер и предметы",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "🏢",
@@ -577,12 +566,8 @@
       ]
     },
     {
-      "id": "tab-city",
-      "title": "Город и места",
+      "name": "Город и места",
       "icon": "location_city",
-      "card_title": "Город и места",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "🏙️",
@@ -677,12 +662,9 @@
       ]
     },
     {
-      "id": "tab-animals",
-      "title": "Животные и природа",
+      "name": "Животные и природа",
       "icon": "pets",
       "card_title": "Природа и животные",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "🌳",
@@ -813,12 +795,9 @@
       ]
     },
     {
-      "id": "tab-time",
-      "title": "Время и даты",
+      "name": "Время и даты",
       "icon": "schedule",
       "card_title": "Время, дни и времена года",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "📅",
@@ -955,12 +934,9 @@
       ]
     },
     {
-      "id": "tab-food",
-      "title": "Еда и напитки",
+      "name": "Еда и напитки",
       "icon": "restaurant",
       "card_title": "Еда, напитки и лакомства",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "🍰",
@@ -995,12 +971,9 @@
       ]
     },
     {
-      "id": "tab-verbs",
-      "title": "Глаголы",
+      "name": "Глаголы",
       "icon": "directions_run",
       "card_title": "Глаголы и действия",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "💤",
@@ -1227,12 +1200,9 @@
       ]
     },
     {
-      "id": "tab-phrases",
-      "title": "Местоимения и фразы",
+      "name": "Местоимения и фразы",
       "icon": "chat",
       "card_title": "Местоимения, вопросы и полезные фразы",
-      "description": null,
-      "type": "standard",
       "items": [
         {
           "icon": "🤝",
