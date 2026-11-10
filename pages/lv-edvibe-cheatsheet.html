@@ -523,15 +523,15 @@
             const datasets = [];
 
             // 1. Загрузка основного файла
-            const baseData = await fetchJsonIfExists('lv-edvibe-data.json');
+            const baseData = await fetchJsonIfExists('lv-data.json');
             if (baseData) {
                 datasets.push(baseData);
             }
 
-            // 2. Автоматическая загрузка файлов с номерами: lv-edvibe-data-1.json, lv-edvibe-data-2.json ...
+            // 2. Автоматическая загрузка файлов с номерами: lv-data-1.json, lv-data-2.json ...
             let fileIndex = 1;
             while (true) {
-                const numberedData = await fetchJsonIfExists(`lv-edvibe-data-${fileIndex}.json`);
+                const numberedData = await fetchJsonIfExists(`lv-data-${fileIndex}.json`);
                 if (!numberedData) {
                     break;
                 }
@@ -554,7 +554,7 @@
                 <div class="card-panel red lighten-4 red-text text-darken-4">
                     <i class="material-icons left">error</i>
                     <b>Ошибка загрузки данных:</b> ${escapeHtml(error.message)}.
-                    Убедитесь, что файл <code>lv-edvibe-data.json</code> находится рядом с HTML страницей.
+                    Убедитесь, что файл <code>lv-data.json</code> находится рядом с HTML страницей.
                 </div>
             `;
         }
