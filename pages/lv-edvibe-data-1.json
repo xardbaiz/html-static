@@ -1,0 +1,564 @@
+{
+  "last_updated": "10.11.2026",
+  "module_info": "По состоянию на конец блока №2 (+ Обновление из Quizlet)",
+  "categories": [
+    {
+      "name": "Семья и люди",
+      "icon": "group",
+      "items": [
+        {
+          "icon": "👤",
+          "word": "igaunis",
+          "translation": "эстонец",
+          "example": "Viņš ir igaunis."
+        }
+      ]
+    },
+    {
+      "name": "Профессии",
+      "icon": "work",
+      "card_title": "Профессии и деятельность",
+      "items": [
+        {
+          "icon": "🎭",
+          "word": "aktieris",
+          "translation": "актер",
+          "example": "Aktieris spēlē teātrī."
+        },
+        {
+          "icon": "👩‍🏫",
+          "word": "skolotājs",
+          "translation": "учитель",
+          "example": "Skolotājs māca bērnus."
+        },
+        {
+          "icon": "⚙️",
+          "word": "inženieris",
+          "translation": "инженер",
+          "example": "Inženieris projektē ēkas."
+        },
+        {
+          "icon": "🍲",
+          "word": "pavārs",
+          "translation": "повар",
+          "example": "Pavārs gatavo gardas pusdienas."
+        },
+        {
+          "icon": "👮",
+          "word": "policists",
+          "translation": "полицейский",
+          "example": "Policists sargā kārtību."
+        },
+        {
+          "icon": "🏛️",
+          "word": "politiķis",
+          "translation": "политик",
+          "example": "Politiķis uzstājas saeimā."
+        },
+        {
+          "icon": "📰",
+          "word": "žurnālists",
+          "translation": "журналист",
+          "example": "Žurnālists raksta rakstu."
+        },
+        {
+          "icon": "💻",
+          "word": "programmētājs",
+          "translation": "программист",
+          "example": "Programmētājs raksta kodu."
+        },
+        {
+          "icon": "💼",
+          "word": "biroja darbinieks",
+          "translation": "офисный работник",
+          "example": "Biroja darbinieks strādā birojā."
+        },
+        {
+          "icon": "💇",
+          "word": "frizieris",
+          "translation": "парикмахер",
+          "example": "Frizieris griež matus."
+        }
+      ]
+    },
+    {
+      "name": "Дом и быт",
+      "icon": "home",
+      "card_title": "Дом, интерьер и предметы",
+      "items": [
+        {
+          "icon": "🧳",
+          "word": "čemodāns",
+          "translation": "чемодан",
+          "example": "Čemodāns ir smags."
+        },
+        {
+          "icon": "🎸",
+          "word": "ģitāra",
+          "translation": "гитара",
+          "example": "Viņš spēlē ģitāru."
+        },
+        {
+          "icon": "🏋️",
+          "word": "hanteles",
+          "translation": "гантели",
+          "example": "Treniņā izmanto hanteles."
+        },
+        {
+          "icon": "👍",
+          "word": "īkšķis",
+          "translation": "большой палец",
+          "example": "Rādīt īkšķi uz augšu."
+        },
+        {
+          "icon": "🪖",
+          "word": "ķivere",
+          "translation": "шлем / каска",
+          "example": "Braucot ar velosipēdu, vajag ķiveri."
+        },
+        {
+          "icon": "🛄",
+          "word": "skapis",
+          "translation": "шкаф",
+          "example": "Drēbes stāv skapī."
+        },
+        {
+          "icon": "🍽️",
+          "word": "šķīvis",
+          "translation": "тарелка",
+          "example": "Zupa ir šķīvī."
+        },
+        {
+          "icon": "🖼️",
+          "word": "rāmis",
+          "translation": "рама",
+          "example": "Glezna ir rāmī."
+        },
+        {
+          "icon": "⏰",
+          "word": "pulkstenis",
+          "translation": "часы",
+          "example": "Pulkstenis rāda laiku."
+        }
+      ]
+    },
+    {
+      "name": "Город и места",
+      "icon": "location_city",
+      "items": [
+        {
+          "icon": "⛺",
+          "word": "telts",
+          "translation": "палатка",
+          "example": "Plašā telts ir mežā."
+        },
+        {
+          "icon": "🏟️",
+          "word": "stadions",
+          "translation": "стадион",
+          "example": "Futbola stadions."
+        },
+        {
+          "icon": "💊",
+          "word": "aptieka",
+          "translation": "аптека",
+          "example": "Aptieka ir atvērta."
+        },
+        {
+          "icon": "🏦",
+          "word": "banka",
+          "translation": "банк",
+          "example": "Banka atrodas centrā."
+        },
+        {
+          "icon": "🍽️",
+          "word": "restorāns",
+          "translation": "ресторан",
+          "example": "Mēs vakariņojam restorānā."
+        },
+        {
+          "icon": "📮",
+          "word": "pasts",
+          "translation": "почта",
+          "example": "Nosūtīt vēstuli pa pastu."
+        },
+        {
+          "icon": "🏫",
+          "word": "skola",
+          "translation": "школа",
+          "example": "Bērni iet uz skolu."
+        },
+        {
+          "icon": "🛬",
+          "word": "lidosta",
+          "translation": "аэропорт",
+          "example": "Lidosta ir liela."
+        },
+        {
+          "icon": "🚏",
+          "word": "pietura",
+          "translation": "остановка",
+          "example": "Autobusa pietura."
+        },
+        {
+          "icon": "🏢",
+          "word": "kopuzņēmums",
+          "translation": "совместное предприятие",
+          "example": "Strādāt kopuzņēmumā."
+        }
+      ]
+    },
+    {
+      "name": "Животные и природа",
+      "icon": "pets",
+      "card_title": "Природа и животные",
+      "items": [
+        {
+          "icon": "🦫",
+          "word": "ezers",
+          "translation": "озеро",
+          "example": "Dziļš ezers mežā."
+        },
+        {
+          "icon": "🐹",
+          "word": "kāmis",
+          "translation": "хомяк",
+          "example": "Kāmis dzīvo būrī."
+        },
+        {
+          "icon": "🦢",
+          "word": "gulbis",
+          "translation": "лебедь",
+          "example": "Baltas gulbis peld ezerā."
+        },
+        {
+          "icon": "🦆",
+          "word": "zoss",
+          "translation": "гусь",
+          "example": "Traka zoss skrien."
+        },
+        {
+          "icon": "🐟",
+          "word": "zivs",
+          "translation": "рыба",
+          "example": "Garšīga zivs."
+        }
+      ]
+    },
+    {
+      "name": "Время и даты",
+      "icon": "schedule",
+      "card_title": "Время, дни и времена года",
+      "items": [
+        {
+          "icon": "❄️",
+          "word": "ziema",
+          "translation": "зима",
+          "example": "Ziemā ir auksts."
+        },
+        {
+          "icon": "📅",
+          "word": "februāris",
+          "translation": "февраль",
+          "example": "Februāris ir otrais mēnesis."
+        },
+        {
+          "icon": "📅",
+          "word": "marts",
+          "translation": "март",
+          "example": "Marts ir pavasarī."
+        },
+        {
+          "icon": "📅",
+          "word": "aprīlis",
+          "translation": "апрель",
+          "example": "Aprīlis ir pavasara mēnesis."
+        },
+        {
+          "icon": "📅",
+          "word": "maijs",
+          "translation": "май",
+          "example": "Maijā zied koki."
+        },
+        {
+          "icon": "📅",
+          "word": "jūnijs",
+          "translation": "июнь",
+          "example": "Jūnijā sākas vasara."
+        },
+        {
+          "icon": "📅",
+          "word": "jūlijs",
+          "translation": "июль",
+          "example": "Jūlijs ir karsts mēnesis."
+        },
+        {
+          "icon": "📅",
+          "word": "augusts",
+          "translation": "август",
+          "example": "Augusts ir pēdējais vasaras mēnesis."
+        },
+        {
+          "icon": "📅",
+          "word": "septembris",
+          "translation": "сентябрь",
+          "example": "Septembrī sākas mācības."
+        },
+        {
+          "icon": "📅",
+          "word": "oktobris",
+          "translation": "октябрь",
+          "example": "Oktobrī ir rudens."
+        },
+        {
+          "icon": "📅",
+          "word": "novembris",
+          "translation": "ноябрь",
+          "example": "Novembrī ir vēss."
+        }
+      ]
+    },
+    {
+      "name": "Глаголы",
+      "icon": "directions_run",
+      "card_title": "Глаголы и действия",
+      "items": [
+        {
+          "icon": "🤡",
+          "word": "jokot",
+          "translation": "шутить",
+          "example": "Mums patīk jokot."
+        },
+        {
+          "icon": "🔄",
+          "word": "atkārtot",
+          "translation": "повторять",
+          "example": "Lūdzu atkārtot teikumu."
+        },
+        {
+          "icon": "💍",
+          "word": "apprecēties",
+          "translation": "пожениться",
+          "example": "Viņi nolēma apprecēties."
+        }
+      ]
+    },
+    {
+      "name": "Местоимения и фразы",
+      "icon": "chat",
+      "card_title": "Местоимения, вопросы и полезные фразы",
+      "items": [
+        {
+          "icon": "💬",
+          "word": "vārds",
+          "translation": "имя / слово",
+          "example": "Mans vārds ir Kaspars."
+        },
+        {
+          "icon": "🌍",
+          "word": "pasaule",
+          "translation": "мир",
+          "example": "Pasaule ir liela."
+        },
+        {
+          "icon": "📖",
+          "word": "stāsts",
+          "translation": "рассказ",
+          "example": "Interesants stāsts."
+        },
+        {
+          "icon": "📝",
+          "word": "teikums",
+          "translation": "предложение",
+          "example": "Garš teikums."
+        },
+        {
+          "icon": "❓",
+          "word": "jautājums",
+          "translation": "вопрос",
+          "example": "Man ir jautājums."
+        },
+        {
+          "icon": "❓",
+          "word": "vai",
+          "translation": "ли",
+          "example": "Vai tu zini?"
+        },
+        {
+          "icon": "🔢",
+          "word": "cik",
+          "translation": "сколько",
+          "example": "Cik tas maksā?"
+        },
+        {
+          "icon": "🔢",
+          "word": "tik",
+          "translation": "столько",
+          "example": "Tik daudz cilvēku."
+        },
+        {
+          "icon": "❓",
+          "word": "kas",
+          "translation": "кто / что",
+          "example": "Kas tas ir?"
+        },
+        {
+          "icon": "❓",
+          "word": "kā",
+          "translation": "как",
+          "example": "Kā tevi sauc?"
+        },
+        {
+          "icon": "❓",
+          "word": "ko",
+          "translation": "кого / что",
+          "example": "Ko tu dari?"
+        },
+        {
+          "icon": "📍",
+          "word": "kur",
+          "translation": "где",
+          "example": "Kur tu dzīvo?"
+        },
+        {
+          "icon": "👀",
+          "word": "acis",
+          "translation": "глаза",
+          "example": "Skaistas acis."
+        },
+        {
+          "icon": "👂",
+          "word": "ausis",
+          "translation": "уши",
+          "example": "Lielas ausis."
+        },
+        {
+          "icon": "🤨",
+          "word": "uzacis",
+          "translation": "брови",
+          "example": "Biezas uzacis."
+        },
+        {
+          "icon": "🗣️",
+          "word": "balss",
+          "translation": "голос",
+          "example": "Skaļa balss."
+        },
+        {
+          "icon": "🌌",
+          "word": "debess",
+          "translation": "небо",
+          "example": "Skaidra debess."
+        },
+        {
+          "icon": "🥐",
+          "word": "brokastis",
+          "translation": "завтрак",
+          "example": "Lieliskas brokastis."
+        },
+        {
+          "icon": "🚪",
+          "word": "durvis",
+          "translation": "двери",
+          "example": "Dārgas durvis."
+        },
+        {
+          "icon": "💭",
+          "word": "sapnis",
+          "translation": "сон / мечта",
+          "example": "Skaists sapnis."
+        },
+        {
+          "icon": "🔢",
+          "word": "nulle",
+          "translation": "ноль",
+          "example": "Nulle grādu."
+        },
+        {
+          "icon": "1️⃣",
+          "word": "viens",
+          "translation": "один",
+          "example": "Viens gads."
+        },
+        {
+          "icon": "2️⃣",
+          "word": "divi",
+          "translation": "два",
+          "example": "Divi cilvēki."
+        },
+        {
+          "icon": "3️⃣",
+          "word": "trīs",
+          "translation": "три",
+          "example": "Trīs dienas."
+        },
+        {
+          "icon": "4️⃣",
+          "word": "četri",
+          "translation": "четыре",
+          "example": "Četri mēneši."
+        },
+        {
+          "icon": "5️⃣",
+          "word": "pieci",
+          "translation": "пять",
+          "example": "Pieci eiro."
+        },
+        {
+          "icon": "6️⃣",
+          "word": "seši",
+          "translation": "шесть",
+          "example": "Seši bērni."
+        },
+        {
+          "icon": "7️⃣",
+          "word": "septiņi",
+          "translation": "семь",
+          "example": "Septiņas dienas nedēļā."
+        },
+        {
+          "icon": "8️⃣",
+          "word": "astoņi",
+          "translation": "восемь",
+          "example": "Astoņi pulkstenī."
+        },
+        {
+          "icon": "9️⃣",
+          "word": "deviņi",
+          "translation": "девять",
+          "example": "Deviņi stāvi."
+        },
+        {
+          "icon": "🔟",
+          "word": "desmit",
+          "translation": "десять",
+          "example": "Desmit minūtes."
+        },
+        {
+          "icon": "🔢",
+          "word": "vienpadsmit",
+          "translation": "одиннадцать",
+          "example": "Vienpadsmit gadi."
+        },
+        {
+          "icon": "🔢",
+          "word": "divpadsmit",
+          "translation": "двенадцать",
+          "example": "Divpadsmit mēneši."
+        },
+        {
+          "icon": "🔢",
+          "word": "trīspadsmit",
+          "translation": "тринадцать",
+          "example": "Trīspadsmit numurs."
+        },
+        {
+          "icon": "🔢",
+          "word": "četrpadsmit",
+          "translation": "четырнадцать",
+          "example": "Četrpadsmit dienas."
+        }
+      ]
+    }
+  ]
+}
