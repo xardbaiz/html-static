@@ -1,0 +1,262 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.local/pages/lv-data.schema.json",
+  "title": "Латышский словарь (lv-data*.json)",
+  "description": "Формат файлов данных для pages/lv-edvibe-cheatsheet.html. См. DATA_FORMAT.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "categories"
+  ],
+  "properties": {
+    "last_updated": {
+      "description": "Дата обновления в шапке страницы, формат DD.MM.YYYY.",
+      "type": "string",
+      "pattern": "^\\d{2}\\.\\d{2}\\.\\d{4}$",
+      "examples": [
+        "10.11.2026"
+      ]
+    },
+    "module_info": {
+      "description": "Подпись в шапке страницы.",
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "По состоянию на конец блока №2 (+ Обновление из Quizlet)"
+      ]
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/category"
+      }
+    }
+  },
+  "definitions": {
+    "known_categories": {
+      "description": "Реестр категорий. Синхронизирован с таблицей в DATA_FORMAT.md §4. Расширяйте обе записи одновременно.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Антонимы": {
+          "type": "string",
+          "const": "compare_arrows"
+        },
+        "Семья и люди": {
+          "type": "string",
+          "const": "group"
+        },
+        "Профессии": {
+          "type": "string",
+          "const": "work"
+        },
+        "Дом и быт": {
+          "type": "string",
+          "const": "home"
+        },
+        "Город и места": {
+          "type": "string",
+          "const": "location_city"
+        },
+        "Животные и природа": {
+          "type": "string",
+          "const": "pets"
+        },
+        "Время и даты": {
+          "type": "string",
+          "const": "schedule"
+        },
+        "Еда и напитки": {
+          "type": "string",
+          "const": "restaurant"
+        },
+        "Глаголы": {
+          "type": "string",
+          "const": "directions_run"
+        },
+        "Местоимения и фразы": {
+          "type": "string",
+          "const": "chat"
+        }
+      }
+    },
+    "latvian": {
+      "description": "Латышский текст: без кириллицы и без HTML-тегов.",
+      "type": "string",
+      "minLength": 1,
+      "not": {
+        "pattern": "[А-Яа-яЁё<>&]"
+      }
+    },
+    "russian": {
+      "description": "Русский перевод, без HTML-тегов.",
+      "type": "string",
+      "minLength": 1,
+      "not": {
+        "pattern": "[<>&]"
+      }
+    },
+    "emoji": {
+      "description": "Один emoji-символ (не имя Material Icons).",
+      "type": "string",
+      "minLength": 1
+    },
+    "material_icon": {
+      "description": "Имя иконки Material Icons: строчная латиница, цифры, подчёркивания.",
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "standard_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "icon",
+        "word",
+        "translation"
+      ],
+      "properties": {
+        "icon": {
+          "$ref": "#/definitions/emoji"
+        },
+        "word": {
+          "$ref": "#/definitions/latvian"
+        },
+        "translation": {
+          "$ref": "#/definitions/russian"
+        },
+        "example": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/latvian"
+            }
+          ]
+        }
+      }
+    },
+    "antonym_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "word_a",
+        "translation_a",
+        "word_b",
+        "translation_b"
+      ],
+      "properties": {
+        "word_a": {
+          "$ref": "#/definitions/latvian"
+        },
+        "translation_a": {
+          "$ref": "#/definitions/russian"
+        },
+        "example_a": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/latvian"
+            }
+          ]
+        },
+        "icon_a": {
+          "$ref": "#/definitions/emoji"
+        },
+        "word_b": {
+          "$ref": "#/definitions/latvian"
+        },
+        "translation_b": {
+          "$ref": "#/definitions/russian"
+        },
+        "example_b": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/latvian"
+            }
+          ]
+        },
+        "icon_b": {
+          "$ref": "#/definitions/emoji"
+        }
+      }
+    },
+    "category_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "icon",
+        "items"
+      ],
+      "properties": {
+        "name": {
+          "description": "Имя вкладки. Точный ключ слияния между файлами — не переименовывать.",
+          "type": "string",
+          "minLength": 1
+        },
+        "icon": {
+          "$ref": "#/definitions/material_icon"
+        },
+        "type": {
+          "description": "Режим отображения: standard (обычная таблица) или antonyms (таблица пар).",
+          "enum": [
+            "standard",
+            "antonyms"
+          ]
+        },
+        "card_title": {
+          "description": "Заголовок карточки. Применяется только из первого файла, где задан.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "description": "Подпись под заголовком карточки.",
+          "type": "string",
+          "minLength": 1
+        },
+        "items": {
+          "description": "Форма элементов зависит от type; проверяется ветками category Standard/Antonyms.",
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    "category": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/category_base"
+        }
+      ],
+      "if": {
+        "properties": {
+          "type": {
+            "const": "antonyms"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/definitions/antonym_item"
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/definitions/standard_item"
+            }
+          }
+        }
+      }
+    }
+  }
+}
