@@ -1,0 +1,476 @@
+{
+  "last_updated": "15.11.2026",
+  "module_info": "По состоянию на конец Модуля №15",
+  "categories": [
+    {
+      "name": "Цвета",
+      "icon": "palette",
+      "card_title": "Цвета",
+      "description": "Прилагательные цвета: мужской и женский род",
+      "items": [
+        {
+          "icon": "🔴",
+          "word": "sarkans / sarkana",
+          "translation": "красный",
+          "example": "Sarkanais ābols ir ļoti salds."
+        },
+        {
+          "icon": "🟡",
+          "word": "dzeltens / dzeltena",
+          "translation": "жёлтый",
+          "example": "Vasarā zied dzeltenas puķes."
+        },
+        {
+          "icon": "🟢",
+          "word": "zaļš / zaļa",
+          "translation": "зелёный",
+          "example": "Zaļa zāle aug dārzā."
+        },
+        {
+          "icon": "🔵",
+          "word": "zils / zila",
+          "translation": "синий",
+          "example": "Debess ir zila."
+        },
+        {
+          "icon": "🟠",
+          "word": "oranžs / oranža",
+          "translation": "оранжевый",
+          "example": "Oranža ir apelsīna krāsa."
+        },
+        {
+          "icon": "🟤",
+          "word": "brūns / brūna",
+          "translation": "коричневый",
+          "example": "Brūns lācis dzīvo mežā."
+        },
+        {
+          "icon": "⚫",
+          "word": "melns / melna",
+          "translation": "чёрный",
+          "example": "Tētim ir melns kaķis."
+        },
+        {
+          "icon": "⚪",
+          "word": "balts / balta",
+          "translation": "белый",
+          "example": "Ziema ir balta."
+        },
+        {
+          "icon": "🩶",
+          "word": "pelēks / pelēka",
+          "translation": "серый",
+          "example": "Pelēks kaķis sēž logā."
+        },
+        {
+          "icon": "🟣",
+          "word": "violets / violeta",
+          "translation": "фиолетовый",
+          "example": "Violetas puķes zied dārzā."
+        },
+        {
+          "icon": "🪻",
+          "word": "lillā",
+          "translation": "сиреневый",
+          "example": "Man patīk lillā krāsa."
+        },
+        {
+          "icon": "🌸",
+          "word": "rozā",
+          "translation": "розовый",
+          "example": "Rozā kleita ir skaista."
+        }
+      ]
+    },
+    {
+      "name": "Глаголы",
+      "icon": "directions_run",
+      "items": [
+        {
+          "icon": "🎓",
+          "word": "studēt",
+          "translation": "изучать",
+          "example": "Es studēju medicīnu universitātē."
+        },
+        {
+          "icon": "🏠",
+          "word": "apciemot",
+          "translation": "навещать",
+          "example": "Svētdien mēs apciemosim vecmāmiņu."
+        },
+        {
+          "icon": "🚪",
+          "word": "apmeklēt",
+          "translation": "посещать",
+          "example": "Mēs apmeklējam muzeju."
+        },
+        {
+          "icon": "🎣",
+          "word": "makšķerēt",
+          "translation": "рыбачить",
+          "example": "Tētis makšķerē pie ezera."
+        },
+        {
+          "icon": "🔑",
+          "word": "izīrēt",
+          "translation": "сдавать в аренду",
+          "example": "Viņa izīrē savu dzīvokli."
+        },
+        {
+          "icon": "🏡",
+          "word": "īrēt",
+          "translation": "арендовать",
+          "example": "Mēs īrējam mazu māju."
+        },
+        {
+          "icon": "✏️",
+          "word": "zīmēt",
+          "translation": "рисовать",
+          "example": "Bērns zīmē kaķi."
+        },
+        {
+          "icon": "🎹",
+          "word": "spēlēt klavieres",
+          "translation": "играть на пианино",
+          "example": "Māsa prot spēlēt klavieres."
+        },
+        {
+          "icon": "💃",
+          "word": "dejot",
+          "translation": "танцевать",
+          "example": "Mēs dejojam svētkos."
+        },
+        {
+          "icon": "🔧",
+          "word": "labot",
+          "translation": "чинить",
+          "example": "Tētis labo veco velosipēdu."
+        },
+        {
+          "icon": "🛠️",
+          "word": "remontēt",
+          "translation": "ремонтировать",
+          "example": "Viņi remontē virtuvi."
+        },
+        {
+          "icon": "🔍",
+          "word": "meklēt",
+          "translation": "искать",
+          "example": "Es meklēju savu atslēgu."
+        },
+        {
+          "icon": "🍄",
+          "word": "sēņot",
+          "translation": "собирать грибы",
+          "example": "Rudenī mēs ejam sēņot."
+        },
+        {
+          "icon": "🛋️",
+          "word": "atpūsties",
+          "translation": "отдохнуть",
+          "example": "Pēc darba es gribu atpūsties."
+        }
+      ]
+    },
+    {
+      "name": "Еда и напитки",
+      "icon": "restaurant",
+      "items": [
+        {
+          "icon": "🍪",
+          "word": "cepumi",
+          "translation": "печенья",
+          "example": "Mamma cep gardus cepumus."
+        },
+        {
+          "icon": "🌾",
+          "word": "griķi",
+          "translation": "гречка",
+          "example": "Vakarā mēs ēdām griķus."
+        },
+        {
+          "icon": "🍷",
+          "word": "karstvīns",
+          "translation": "глинтвейн",
+          "example": "Ziemā mēs dzeram karstvīnu."
+        },
+        {
+          "icon": "🐟",
+          "word": "siļķe kažokā",
+          "translation": "селёдка под шубой",
+          "example": "Svētkos mēs gatavojam siļķi kažokā."
+        },
+        {
+          "icon": "🐔",
+          "word": "vista",
+          "translation": "курица",
+          "example": "Vakariņās būs cepta vista."
+        },
+        {
+          "icon": "🥩",
+          "word": "cūkgaļa",
+          "translation": "свинина",
+          "example": "Veikalā pārdod svaigu cūkgaļu."
+        },
+        {
+          "icon": "🍞",
+          "word": "baltmaize",
+          "translation": "белый хлеб",
+          "example": "No rīta es ēdu baltmaizi."
+        },
+        {
+          "icon": "🥔",
+          "word": "kartupeļi",
+          "translation": "картошка",
+          "example": "Virtuvē ir vārīti kartupeļi."
+        },
+        {
+          "icon": "🥟",
+          "word": "pīrādziņi",
+          "translation": "пирожки",
+          "example": "Vecmāmiņa cep pīrādziņus ar gaļu."
+        },
+        {
+          "icon": "🥗",
+          "word": "salāti",
+          "translation": "салат",
+          "example": "Es gatavoju zaļos salātus."
+        },
+        {
+          "icon": "🍬",
+          "word": "saldumi",
+          "translation": "сладости",
+          "example": "Bērni ļoti mīl saldumus."
+        },
+        {
+          "icon": "🍖",
+          "word": "gaļa",
+          "translation": "мясо",
+          "example": "Veikalā ir svaiga gaļa."
+        },
+        {
+          "icon": "🍓",
+          "word": "zemenes",
+          "translation": "клубника",
+          "example": "Vasarā mēs lasām zemenes."
+        },
+        {
+          "icon": "🥞",
+          "word": "pankūkas",
+          "translation": "блины",
+          "example": "Svētdienās mēs cepam pankūkas."
+        },
+        {
+          "icon": "🥣",
+          "word": "putra",
+          "translation": "каша",
+          "example": "No rīta bērns ēd putru."
+        },
+        {
+          "icon": "🍄",
+          "word": "sēnes",
+          "translation": "грибы",
+          "example": "Mežā aug daudz sēņu."
+        },
+        {
+          "icon": "🥚",
+          "word": "olas",
+          "translation": "яйца",
+          "example": "Ledusskapī ir sešas olas."
+        },
+        {
+          "icon": "🍞",
+          "word": "maize",
+          "translation": "хлеб",
+          "example": "Es pērku svaigu maizi."
+        },
+        {
+          "icon": "🥛",
+          "word": "piens",
+          "translation": "молоко",
+          "example": "Kaķis dzer pienu."
+        },
+        {
+          "icon": "🛒",
+          "word": "pārtika",
+          "translation": "продукты",
+          "example": "Mums jāpērk pārtika nedēļai."
+        }
+      ]
+    },
+    {
+      "name": "Животные и природа",
+      "icon": "pets",
+      "items": [
+        {
+          "icon": "🦌",
+          "word": "briedis",
+          "translation": "олень",
+          "example": "Mežā dzīvo liels briedis."
+        }
+      ]
+    },
+    {
+      "name": "Дом и быт",
+      "icon": "home",
+      "items": [
+        {
+          "icon": "🎨",
+          "word": "krāsa",
+          "translation": "цвет",
+          "example": "Man patīk šī krāsa."
+        },
+        {
+          "icon": "✋",
+          "word": "roka",
+          "translation": "рука",
+          "example": "Viņai ir auksta roka."
+        }
+      ]
+    },
+    {
+      "name": "Семья и люди",
+      "icon": "group",
+      "items": [
+        {
+          "icon": "😐",
+          "word": "nopietna",
+          "translation": "серьёзная",
+          "example": "Viņa ir ļoti nopietna meitene."
+        },
+        {
+          "icon": "👩‍🍳",
+          "word": "saimniece",
+          "translation": "хозяйка",
+          "example": "Saimniece mūs laipni uzņēma."
+        },
+        {
+          "icon": "🧍",
+          "word": "korpulents",
+          "translation": "полный, тучный",
+          "example": "Kaimiņš ir augsts un korpulents."
+        },
+        {
+          "icon": "🪪",
+          "word": "uzvārds",
+          "translation": "фамилия",
+          "example": "Kāds ir tavs uzvārds?"
+        }
+      ]
+    },
+    {
+      "name": "Местоимения и фразы",
+      "icon": "chat",
+      "items": [
+        {
+          "icon": "🚫",
+          "word": "nekad",
+          "translation": "никогда",
+          "example": "Es nekad neesmu bijis Rīgā."
+        },
+        {
+          "icon": "🕰️",
+          "word": "reti",
+          "translation": "редко",
+          "example": "Viņš reti brauc uz laukiem."
+        },
+        {
+          "icon": "🔁",
+          "word": "dažreiz",
+          "translation": "иногда",
+          "example": "Dažreiz mēs ejam uz teātri."
+        },
+        {
+          "icon": "📅",
+          "word": "parasti",
+          "translation": "обычно",
+          "example": "Parasti es ceļos septiņos."
+        },
+        {
+          "icon": "🔊",
+          "word": "bieži",
+          "translation": "часто",
+          "example": "Mēs bieži spēlējam galda spēles."
+        },
+        {
+          "icon": "♾️",
+          "word": "vienmēr",
+          "translation": "всегда",
+          "example": "Viņa vienmēr ir laipna."
+        },
+        {
+          "icon": "⚡",
+          "word": "Tūlīt!",
+          "translation": "сию секунду",
+          "example": "Tūlīt es nākšu!"
+        },
+        {
+          "icon": "🙏",
+          "word": "Es vēlos",
+          "translation": "Я желаю",
+          "example": "Es vēlos kafiju ar pienu."
+        },
+        {
+          "icon": "💭",
+          "word": "Es gribētu",
+          "translation": "Я хотел бы",
+          "example": "Es gribētu jaunu telefonu."
+        },
+        {
+          "icon": "💯",
+          "word": "pavisam",
+          "translation": "совершенно, совсем",
+          "example": "Šodien ir pavisam silts laiks."
+        },
+        {
+          "icon": "🌍",
+          "word": "visur",
+          "translation": "везде",
+          "example": "Vasarā ziedi ir visur."
+        },
+        {
+          "icon": "➕",
+          "word": "gan…gan…",
+          "translation": "и…и…",
+          "example": "Es mācos gan latviešu, gan angļu valodu."
+        },
+        {
+          "icon": "🎨",
+          "word": "dažādi",
+          "translation": "разные",
+          "example": "Veikalā ir dažādi augļi."
+        },
+        {
+          "icon": "👌",
+          "word": "diezgan",
+          "translation": "довольно",
+          "example": "Šodien ir diezgan auksts."
+        },
+        {
+          "icon": "⏱️",
+          "word": "drīz",
+          "translation": "скоро",
+          "example": "Vilciens atbrauks drīz."
+        },
+        {
+          "icon": "💰",
+          "word": "var labi nopelnīt",
+          "translation": "можно хорошо заработать",
+          "example": "Šajā darbā var labi nopelnīt."
+        },
+        {
+          "icon": "❓",
+          "word": "kura",
+          "translation": "которая",
+          "example": "Meitene, kura dzied, ir mana māsa."
+        },
+        {
+          "icon": "😋",
+          "word": "garšīgs",
+          "translation": "вкусный",
+          "example": "Šis ēdiens ir ļoti garšīgs."
+        }
+      ]
+    }
+  ]
+}

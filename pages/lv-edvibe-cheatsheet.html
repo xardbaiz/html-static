@@ -139,6 +139,22 @@
             cursor: pointer;
         }
 
+        /* Метка «новое»: слова из последнего по номеру lv-data-N.json */
+        .new-badge {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 7px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            line-height: 1.4;
+            padding: 1px 5px;
+            border-radius: 3px;
+            background-color: #e53935;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+            cursor: default;
+        }
+
         .category-chip {
             display: inline-block;
             font-size: 0.78rem;
@@ -336,6 +352,10 @@
                 padding: 3px 0;
                 border: none;
             }
+
+            .new-badge {
+                font-size: 0.65rem;
+            }
         }
     </style>
 </head>
@@ -479,7 +499,8 @@
             const cats = data.categories || data.tabs || [];
             cats.forEach(cat => {
                 const name = cat.name || cat.title;
-                const items = cat.items || [];
+                // isNew — слова пришли из последнего по номеру файла lv-data-N.json
+                const items = (cat.items || []).map(item => (data.isNew ? {...item, isNew: true} : item));
 
                 if (categoryMap.has(name)) {
                     const existingCat = categoryMap.get(name);
@@ -539,11 +560,20 @@
                 fileIndex++;
             }
 
+            // Последний по номеру файл считается последним обновлением:
+            // его слова помечаются в таблицах меткой [new].
+            let autoNewSource = null;
+            if (datasets.length > 1) {
+                datasets[datasets.length - 1].isNew = true;
+                autoNewSource = `lv-data-${datasets.length - 1}.json`;
+            }
+
             if (datasets.length === 0) {
                 throw new Error('Файлы данных не найдены');
             }
 
             vocabularyData = mergeVocabularyDatasets(datasets);
+            vocabularyData.autoNewSource = autoNewSource;
             renderHeaderInfo(vocabularyData);
             renderCategories(vocabularyData.categories);
             initMaterializeComponents();
@@ -570,7 +600,11 @@
             if (data.module_info) {
                 text += text ? `. ${escapeHtml(data.module_info)}` : escapeHtml(data.module_info);
             }
-            infoElem.textContent = text;
+            if (data.autoNewSource) {
+                text += text ? `. ` : '';
+                text += `Слова из последнего обновления помечены как '[new]'`;
+            }
+            infoElem.innerHTML = text;
         }
     }
 
@@ -585,14 +619,16 @@
                         word: item.word_a,
                         translation: item.translation_a,
                         example: item.example_a,
-                        category: catName
+                        category: catName,
+                        isNew: item.isNew
                     });
                     allItems.push({
                         icon: item.icon_b,
                         word: item.word_b,
                         translation: item.translation_b,
                         example: item.example_b,
-                        category: catName
+                        category: catName,
+                        isNew: item.isNew
                     });
                 });
             } else {
@@ -659,6 +695,12 @@
         contentContainer.innerHTML = contentHtml;
     }
 
+    // Метка для слов, пришедших с последним обновлением словаря
+    function newBadgeHtml(item) {
+        if (!item || !item.isNew) return '';
+        return '<span class="new-badge" title="Новое слово из последнего обновления">[new]</span>';
+    }
+
     function renderAntonymsTable(items) {
         let rowsHtml = '';
         items.forEach(item => {
@@ -668,11 +710,11 @@
             rowsHtml += `
                 <tr>
                     <td class="emoji-cell">${escapeHtml(item.icon_a || '')}</td>
-                    <td><span class="word-badge ${tooltipA ? 'tooltipped' : ''}" ${tooltipA}>${escapeHtml(item.word_a)}</span></td>
+                    <td><span class="word-badge ${tooltipA ? 'tooltipped' : ''}" ${tooltipA}>${escapeHtml(item.word_a)}</span>${newBadgeHtml(item)}</td>
                     <td>${escapeHtml(item.translation_a)}</td>
                     <td class="antonym-divider center-align">↔</td>
                     <td class="emoji-cell">${escapeHtml(item.icon_b || '')}</td>
-                    <td><span class="word-badge ${tooltipB ? 'tooltipped' : ''}" ${tooltipB}>${escapeHtml(item.word_b)}</span></td>
+                    <td><span class="word-badge ${tooltipB ? 'tooltipped' : ''}" ${tooltipB}>${escapeHtml(item.word_b)}</span>${newBadgeHtml(item)}</td>
                     <td>${escapeHtml(item.translation_b)}</td>
                 </tr>
             `;
@@ -707,7 +749,7 @@
             rowsHtml += `
                 <tr>
                     <td class="emoji-cell">${escapeHtml(item.icon || '')}</td>
-                    <td class="word-cell"><span class="word-badge ${tooltip ? 'tooltipped' : ''}" ${tooltip}>${escapeHtml(item.word)}</span></td>
+                    <td class="word-cell"><span class="word-badge ${tooltip ? 'tooltipped' : ''}" ${tooltip}>${escapeHtml(item.word)}</span>${newBadgeHtml(item)}</td>
                     <td class="trans-cell">${escapeHtml(item.translation)}</td>
                     ${categoryHtml}
                     <td class="example-cell"><span class="example-text">${escapeHtml(item.example || '')}</span></td>

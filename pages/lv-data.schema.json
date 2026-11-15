@@ -78,6 +78,10 @@
         "Местоимения и фразы": {
           "type": "string",
           "const": "chat"
+        },
+        "Цвета": {
+          "type": "string",
+          "const": "palette"
         }
       }
     },
