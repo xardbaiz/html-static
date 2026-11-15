@@ -97,7 +97,7 @@
             {
               "word_a": "garš",
               "translation_a": "длинный",
-              "example_a": "Šī iela ir garša.",
+              "example_a": "Šī iela ir gara.",
               "icon_a": "📏",
               "word_b": "īss",
               "translation_b": "короткий",
@@ -111,7 +111,7 @@
               "icon_a": "🌸",
               "word_b": "neglīts",
               "translation_b": "некрасивый",
-              "example_b": "Skats ir neglīts.",
+              "example_b": "Šis skats ir neglīts.",
               "icon_b": "⚠️"
             },
             {
@@ -212,7 +212,7 @@
               "icon": "🏆",
               "word": "mīļākā",
               "translation": "любимая",
-              "example": "Kāda ir tava mīļākā krāsa?"
+              "example": "Tā ir mana mīļākā krāsa."
             }
           ]
         }
@@ -334,7 +334,7 @@
           "icon": "👩",
           "word": "sieviete",
           "translation": "женщина",
-          "example": "Sieviete pēk puķes."
+          "example": "Sieviete plūc puķes."
         },
         {
           "icon": "👨",
@@ -540,13 +540,13 @@
           "icon": "🧦",
           "word": "zeķes",
           "translation": "носки",
-          "example": "Silta vilnas zeķes."
+          "example": "Man ir siltas zeķes."
         },
         {
           "icon": "👖",
           "word": "josta",
           "translation": "ремень",
-          "example": "Ādas josta."
+          "example": "Tā ir ādas josta."
         },
         {
           "icon": "💰",
@@ -630,7 +630,7 @@
           "icon": "🅿️",
           "word": "stāvvieta",
           "translation": "стоянка",
-          "example": "Automašīnu stāvvieta."
+          "example": "Automašīnas ir stāvvietā."
         },
         {
           "icon": "⛪",
@@ -678,7 +678,7 @@
           "icon": "🛣️",
           "word": "žogs",
           "translation": "забор",
-          "example": "Koka žogs ap dārzu."
+          "example": "Mājas priekšā ir koka žogs."
         },
         {
           "icon": "🌅",
@@ -751,7 +751,7 @@
           "icon": "🌻",
           "word": "puķe",
           "translation": "цветок",
-          "example": "Skaista puķe podiņā."
+          "example": "Dārzā ir skaista puķe."
         },
         {
           "icon": "🐿️",
@@ -769,7 +769,7 @@
           "icon": "🐢",
           "word": "bruņurupucis",
           "translation": "черепаха",
-          "example": "Lēns bruņurupucis."
+          "example": "Bruņurupucis ir lēns."
         },
         {
           "icon": "🦅",
@@ -872,7 +872,7 @@
           "icon": "🗓️",
           "word": "mēneši",
           "translation": "месяцы",
-          "example": "Vasaras mēneši."
+          "example": "Man ir vasaras mēneši."
         },
         {
           "icon": "❄️",
@@ -975,7 +975,7 @@
           "icon": "🍓",
           "word": "ievārījums",
           "translation": "варенье",
-          "example": "Zemeņu ievārījums ar pankūkām."
+          "example": "Man ļoti garšo zemeņu ievārījums."
         },
         {
           "icon": "🌰",
@@ -987,7 +987,7 @@
           "icon": "🟢",
           "word": "zirņi",
           "translation": "горох",
-          "example": "Pelēkie zirņi ar speķi."
+          "example": "Vakariņās mēs ēdam pelēkos zirņus."
         }
       ]
     },
@@ -1090,7 +1090,7 @@
           "icon": "🧼",
           "word": "mazgāt",
           "translation": "мыть",
-          "example": "Mazgāt traukus virtuvē."
+          "example": "Es mazgāju traukus."
         },
         {
           "icon": "🚿",
@@ -1108,7 +1108,7 @@
           "icon": "🚶",
           "word": "staigāt",
           "translation": "гулять",
-          "example": "Staigāt pa parku."
+          "example": "Es staigāju pa parku."
         },
         {
           "icon": "✈️",
@@ -1132,25 +1132,25 @@
           "icon": "💳",
           "word": "maksāt",
           "translation": "платить",
-          "example": "Maksāt par pirkumu."
+          "example": "Es maksāju par pirkumu."
         },
         {
           "icon": "📅",
           "word": "plānot",
           "translation": "планировать",
-          "example": "Plānot nedēļas nogali."
+          "example": "Mēs plānojam nedēļas nogali."
         },
         {
           "icon": "👀",
           "word": "rādīt",
           "translation": "показывать",
-          "example": "Rādīt jaunu ceļu."
+          "example": "Viņa man rāda ceļu."
         },
         {
           "icon": "❤️",
           "word": "mīlēt",
           "translation": "любить",
-          "example": "Mīlēt savu dzimteni."
+          "example": "Es mīlu savu māti."
         },
         {
           "icon": "🥐",
@@ -1180,7 +1180,7 @@
           "icon": "🤸",
           "word": "nodarboties",
           "translation": "заниматься",
-          "example": "Nodarboties ar sportu."
+          "example": "Es gribu nodarboties ar sportu."
         },
         {
           "icon": "📖",
@@ -1415,7 +1415,7 @@
           "icon": "🔹",
           "word": "kurš / kuras / kuri",
           "translation": "который / которые",
-          "example": "Cilvēki, kuri strādā."
+          "example": "Cilvēki, kuri strādā, ir noguruši."
         },
         {
           "icon": "📦",

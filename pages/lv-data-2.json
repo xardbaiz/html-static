@@ -42,7 +42,7 @@
               "icon": "🟠",
               "word": "oranžs / oranža",
               "translation": "оранжевый",
-              "example": "Oranža ir apelsīna krāsa."
+              "example": "Apelsīns ir oranžs."
             },
             {
               "icon": "🟤",
@@ -60,7 +60,7 @@
               "icon": "⚪",
               "word": "balts / balta",
               "translation": "белый",
-              "example": "Ziema ir balta."
+              "example": "Ziemā ir balts sniegs."
             },
             {
               "icon": "🩶",
@@ -98,7 +98,7 @@
               "icon": "😐",
               "word": "nopietna",
               "translation": "серьёзная",
-              "example": "Viņa ir ļoti nopietna meitene."
+              "example": "Viņa ir ļoti nopietna."
             },
             {
               "icon": "🧍",
@@ -238,7 +238,7 @@
           "icon": "🐔",
           "word": "vista",
           "translation": "курица",
-          "example": "Vakariņās būs cepta vista."
+          "example": "Vista dzīvo uz laukiem."
         },
         {
           "icon": "🥩",
@@ -328,7 +328,7 @@
           "icon": "🛒",
           "word": "pārtika",
           "translation": "продукты",
-          "example": "Mums jāpērk pārtika nedēļai."
+          "example": "Mums jāpērk pārtika."
         }
       ]
     },
@@ -388,13 +388,13 @@
           "icon": "🚫",
           "word": "nekad",
           "translation": "никогда",
-          "example": "Es nekad neesmu bijis Rīgā."
+          "example": "Es nekad nekavēju."
         },
         {
           "icon": "🕰️",
           "word": "reti",
           "translation": "редко",
-          "example": "Viņš reti brauc uz laukiem."
+          "example": "Viņš reti lasa grāmatas."
         },
         {
           "icon": "🔁",

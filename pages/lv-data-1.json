@@ -106,7 +106,7 @@
           "icon": "👍",
           "word": "īkšķis",
           "translation": "большой палец",
-          "example": "Rādīt īkšķi uz augšu."
+          "example": "Rādīt īkšķi uz augšu ir labi."
         },
         {
           "icon": "🪖",
@@ -118,7 +118,7 @@
           "icon": "🛄",
           "word": "skapis",
           "translation": "шкаф",
-          "example": "Drēbes stāv skapī."
+          "example": "Drēbes ir skapī."
         },
         {
           "icon": "🍽️",
@@ -154,7 +154,7 @@
           "icon": "🏟️",
           "word": "stadions",
           "translation": "стадион",
-          "example": "Futbola stadions."
+          "example": "Futbola stadions ir liels."
         },
         {
           "icon": "💊",
@@ -178,7 +178,7 @@
           "icon": "📮",
           "word": "pasts",
           "translation": "почта",
-          "example": "Nosūtīt vēstuli pa pastu."
+          "example": "Es sūtu vēstuli pa pastu."
         },
         {
           "icon": "🏫",
@@ -196,13 +196,13 @@
           "icon": "🚏",
           "word": "pietura",
           "translation": "остановка",
-          "example": "Autobusa pietura."
+          "example": "Autobusa pietura ir tuvu."
         },
         {
           "icon": "🏢",
           "word": "kopuzņēmums",
           "translation": "совместное предприятие",
-          "example": "Strādāt kopuzņēmumā."
+          "example": "Viņš strādā kopuzņēmumā."
         }
       ]
     },
@@ -215,7 +215,7 @@
           "icon": "🦫",
           "word": "ezers",
           "translation": "озеро",
-          "example": "Dziļš ezers mežā."
+          "example": "Dziļš ezers ir mežā."
         },
         {
           "icon": "🐹",
@@ -227,19 +227,19 @@
           "icon": "🦢",
           "word": "gulbis",
           "translation": "лебедь",
-          "example": "Baltas gulbis peld ezerā."
+          "example": "Balts gulbis peld ezerā."
         },
         {
           "icon": "🦆",
           "word": "zoss",
           "translation": "гусь",
-          "example": "Traka zoss skrien."
+          "example": "Traka zoss skrien pa ceļu."
         },
         {
           "icon": "🐟",
           "word": "zivs",
           "translation": "рыба",
-          "example": "Garšīga zivs."
+          "example": "Garšīga zivs ir uz galda."
         }
       ]
     },
@@ -264,7 +264,7 @@
           "icon": "📅",
           "word": "marts",
           "translation": "март",
-          "example": "Marts ir pavasarī."
+          "example": "Marts ir pavasara mēnesis."
         },
         {
           "icon": "📅",
@@ -331,7 +331,7 @@
           "icon": "🔄",
           "word": "atkārtot",
           "translation": "повторять",
-          "example": "Lūdzu atkārtot teikumu."
+          "example": "Lūdzu, atkārtojiet teikumu."
         },
         {
           "icon": "💍",
