@@ -3,82 +3,116 @@
   "module_info": "По состоянию на конец Модуля №15",
   "categories": [
     {
-      "name": "Цвета",
-      "icon": "palette",
-      "card_title": "Цвета",
-      "description": "Прилагательные цвета: мужской и женский род",
+      "name": "Прилагательные",
+      "icon": "spellcheck",
+      "card_title": "Прилагательные",
+      "description": "Качества и свойства: цвета, отдельные слова и пары антонимов.",
       "items": [
         {
-          "icon": "🔴",
-          "word": "sarkans / sarkana",
-          "translation": "красный",
-          "example": "Sarkanais ābols ir ļoti salds."
+          "name": "Цвета",
+          "icon": "palette",
+          "card_title": "Цвета",
+          "description": "Прилагательные цвета: мужской и женский род",
+          "items": [
+            {
+              "icon": "🔴",
+              "word": "sarkans / sarkana",
+              "translation": "красный",
+              "example": "Sarkanais ābols ir ļoti salds."
+            },
+            {
+              "icon": "🟡",
+              "word": "dzeltens / dzeltena",
+              "translation": "жёлтый",
+              "example": "Vasarā zied dzeltenas puķes."
+            },
+            {
+              "icon": "🟢",
+              "word": "zaļš / zaļa",
+              "translation": "зелёный",
+              "example": "Zaļa zāle aug dārzā."
+            },
+            {
+              "icon": "🔵",
+              "word": "zils / zila",
+              "translation": "синий",
+              "example": "Debess ir zila."
+            },
+            {
+              "icon": "🟠",
+              "word": "oranžs / oranža",
+              "translation": "оранжевый",
+              "example": "Oranža ir apelsīna krāsa."
+            },
+            {
+              "icon": "🟤",
+              "word": "brūns / brūna",
+              "translation": "коричневый",
+              "example": "Brūns lācis dzīvo mežā."
+            },
+            {
+              "icon": "⚫",
+              "word": "melns / melna",
+              "translation": "чёрный",
+              "example": "Tētim ir melns kaķis."
+            },
+            {
+              "icon": "⚪",
+              "word": "balts / balta",
+              "translation": "белый",
+              "example": "Ziema ir balta."
+            },
+            {
+              "icon": "🩶",
+              "word": "pelēks / pelēka",
+              "translation": "серый",
+              "example": "Pelēks kaķis sēž logā."
+            },
+            {
+              "icon": "🟣",
+              "word": "violets / violeta",
+              "translation": "фиолетовый",
+              "example": "Violetas puķes zied dārzā."
+            },
+            {
+              "icon": "🪻",
+              "word": "lillā",
+              "translation": "сиреневый",
+              "example": "Man patīk lillā krāsa."
+            },
+            {
+              "icon": "🌸",
+              "word": "rozā",
+              "translation": "розовый",
+              "example": "Rozā kleita ir skaista."
+            }
+          ]
         },
         {
-          "icon": "🟡",
-          "word": "dzeltens / dzeltena",
-          "translation": "жёлтый",
-          "example": "Vasarā zied dzeltenas puķes."
-        },
-        {
-          "icon": "🟢",
-          "word": "zaļš / zaļa",
-          "translation": "зелёный",
-          "example": "Zaļa zāle aug dārzā."
-        },
-        {
-          "icon": "🔵",
-          "word": "zils / zila",
-          "translation": "синий",
-          "example": "Debess ir zila."
-        },
-        {
-          "icon": "🟠",
-          "word": "oranžs / oranža",
-          "translation": "оранжевый",
-          "example": "Oranža ir apelsīna krāsa."
-        },
-        {
-          "icon": "🟤",
-          "word": "brūns / brūna",
-          "translation": "коричневый",
-          "example": "Brūns lācis dzīvo mežā."
-        },
-        {
-          "icon": "⚫",
-          "word": "melns / melna",
-          "translation": "чёрный",
-          "example": "Tētim ir melns kaķis."
-        },
-        {
-          "icon": "⚪",
-          "word": "balts / balta",
-          "translation": "белый",
-          "example": "Ziema ir balta."
-        },
-        {
-          "icon": "🩶",
-          "word": "pelēks / pelēka",
-          "translation": "серый",
-          "example": "Pelēks kaķis sēž logā."
-        },
-        {
-          "icon": "🟣",
-          "word": "violets / violeta",
-          "translation": "фиолетовый",
-          "example": "Violetas puķes zied dārzā."
-        },
-        {
-          "icon": "🪻",
-          "word": "lillā",
-          "translation": "сиреневый",
-          "example": "Man patīk lillā krāsa."
-        },
-        {
-          "icon": "🌸",
-          "word": "rozā",
-          "translation": "розовый",
-          "example": "Rozā kleita ir skaista."
+          "name": "Качества и свойства",
+          "icon": "emoji_objects",
+          "card_title": "Качества и свойства",
+          "description": "Прилагательные о человеке, характере и свойствах предметов.",
+          "items": [
+            {
+              "icon": "😐",
+              "word": "nopietna",
+              "translation": "серьёзная",
+              "example": "Viņa ir ļoti nopietna meitene."
+            },
+            {
+              "icon": "🧍",
+              "word": "korpulents",
+              "translation": "полный, тучный",
+              "example": "Kaimiņš ir augsts un korpulents."
+            },
+            {
+              "icon": "😋",
+              "word": "garšīgs",
+              "translation": "вкусный",
+              "example": "Šis ēdiens ir ļoti garšīgs."
+            }
+          ]
         }
       ]
     },
@@ -333,22 +367,10 @@
       "icon": "group",
       "items": [
         {
-          "icon": "😐",
-          "word": "nopietna",
-          "translation": "серьёзная",
-          "example": "Viņa ir ļoti nopietna meitene."
-        },
-        {
           "icon": "👩‍🍳",
           "word": "saimniece",
           "translation": "хозяйка",
           "example": "Saimniece mūs laipni uzņēma."
-        },
-        {
-          "icon": "🧍",
-          "word": "korpulents",
-          "translation": "полный, тучный",
-          "example": "Kaimiņš ir augsts un korpulents."
         },
         {
           "icon": "🪪",
@@ -463,12 +485,6 @@
           "word": "kura",
           "translation": "которая",
           "example": "Meitene, kura dzied, ir mana māsa."
-        },
-        {
-          "icon": "😋",
-          "word": "garšīgs",
-          "translation": "вкусный",
-          "example": "Šis ēdiens ir ļoti garšīgs."
         }
       ]
     }

@@ -187,6 +187,37 @@
             font-weight: 500;
         }
 
+        /* Подкатегория: тема внутри вкладки (напр. «Прилагательные» → «Цвета») */
+        .subcat-block {
+            margin-top: 22px;
+            padding-top: 4px;
+            border-top: 1px dashed #c5cae9;
+        }
+
+        .subcat-block:first-of-type {
+            margin-top: 8px;
+            border-top: none;
+        }
+
+        .subcat-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 0 6px 0;
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #283593;
+        }
+
+        .subcat-title i.material-icons {
+            font-size: 1.3rem;
+        }
+
+        .subcat-description {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+        }
+
         /* Таблица без деструктивного Materialize responsive-table */
         .vocab-table {
             width: 100%;
@@ -486,6 +517,77 @@
         });
     }
 
+    /**
+     * Нормализует категорию. Группа (подкатегории) — категория, у которой в
+     * `items` лежат карточки-категории, а не слова (у карточки есть name и
+     * собственный массив items). Флаг isCard — это элемент группы; на уровне
+     * карточки слова с вложенным items (например, антонимы) группой не считаются.
+     */
+    function normalizeCategory(cat, isGroup = false, isCard = false) {
+        const name = cat.name || cat.title;
+        const items = cat.items || [];
+        const group = !isCard && (isGroup || items.every(it => it && typeof it === 'object'
+            && Array.isArray(it.items)
+            && typeof it.name === 'string'));
+
+        return {
+            name: name,
+            icon: cat.icon || 'folder',
+            type: cat.type || 'standard',
+            card_title: cat.card_title || null,
+            description: cat.description || null,
+            isGroup: group,
+            items: group ? [] : items.map(item => (cat._isNew ? {...item, isNew: true} : item)),
+            subcategories: group
+                ? items.map(sub => normalizeCategory({...sub, _isNew: cat._isNew}, false, true))
+                : []
+        };
+    }
+
+    /** Дописывает слова из карточки-дополнения в уже известную карточку. */
+    function mergeIntoCategory(target, cat) {
+        if (target.isGroup) {
+            mergeGroups(target, cat);
+            return;
+        }
+        target.items.push(...(cat.items || []));
+        if (cat.type && cat.type !== 'standard' && target.type !== cat.type) target.type = cat.type;
+        if (cat.description && !target.description) target.description = cat.description;
+        if (cat.card_title && !target.card_title) target.card_title = cat.card_title;
+    }
+
+    /**
+     * Слияние групп: карточки сводятся по name. Новая карточка встаёт сразу после
+     * той, что шла перед ней в файле-дополнении (или в начало, если такой нет).
+     */
+    function mergeGroups(target, cat) {
+        if (cat.description && !target.description) target.description = cat.description;
+        if (cat.card_title && !target.card_title) target.card_title = cat.card_title;
+
+        const lastIndexByName = new Map();
+        target.subcategories.forEach((sub, i) => lastIndexByName.set(sub.name, i));
+
+        (cat.subcategories || []).forEach((sub, i) => {
+            if (lastIndexByName.has(sub.name)) {
+                const existing = target.subcategories[lastIndexByName.get(sub.name)];
+                existing.items.push(...sub.items);
+                return;
+            }
+
+            const prevNames = (cat.subcategories || []).slice(0, i).map(c => c.name);
+            let insertAt = 0;
+            for (let p = prevNames.length - 1; p >= 0; p--) {
+                if (lastIndexByName.has(prevNames[p])) {
+                    insertAt = lastIndexByName.get(prevNames[p]) + 1;
+                    break;
+                }
+            }
+
+            target.subcategories.splice(insertAt, 0, sub);
+            target.subcategories.forEach((s, idx) => lastIndexByName.set(s.name, idx));
+        });
+    }
+
     function mergeVocabularyDatasets(datasets) {
         const mergedCategories = [];
         const categoryMap = new Map();
@@ -498,26 +600,15 @@
 
             const cats = data.categories || data.tabs || [];
             cats.forEach(cat => {
-                const name = cat.name || cat.title;
                 // isNew — слова пришли из последнего по номеру файла lv-data-N.json
-                const items = (cat.items || []).map(item => (data.isNew ? {...item, isNew: true} : item));
+                const incoming = normalizeCategory({...cat, _isNew: data.isNew});
+                const name = incoming.name;
 
                 if (categoryMap.has(name)) {
-                    const existingCat = categoryMap.get(name);
-                    existingCat.items.push(...items);
-                    if (cat.description && !existingCat.description) existingCat.description = cat.description;
-                    if (cat.card_title && !existingCat.card_title) existingCat.card_title = cat.card_title;
+                    mergeIntoCategory(categoryMap.get(name), incoming);
                 } else {
-                    const newCat = {
-                        name: name,
-                        icon: cat.icon || 'folder',
-                        type: cat.type || 'standard',
-                        card_title: cat.card_title || null,
-                        description: cat.description || null,
-                        items: [...items]
-                    };
-                    categoryMap.set(name, newCat);
-                    mergedCategories.push(newCat);
+                    categoryMap.set(name, incoming);
+                    mergedCategories.push(incoming);
                 }
             });
         });
@@ -608,9 +699,22 @@
         }
     }
 
+    /** Собирает слова всех карточек — обычных или вложенных в подкатегории. */
+    function flattenCategories(categories) {
+        const flat = [];
+        categories.forEach(cat => {
+            if (cat.isGroup) {
+                cat.subcategories.forEach(sub => flat.push(sub));
+            } else {
+                flat.push(cat);
+            }
+        });
+        return flat;
+    }
+
     function buildAllCategory(categories) {
         const allItems = [];
-        categories.forEach(cat => {
+        flattenCategories(categories).forEach(cat => {
             const catName = cat.name || cat.title;
             if (cat.type === 'antonyms') {
                 cat.items.forEach(item => {
@@ -653,6 +757,23 @@
         };
     }
 
+    /** Карточка вкладки: обычная категория целиком или группа карточек-подкатегорий. */
+    function renderCardContent(cat) {
+        if (!cat.isGroup) {
+            return cat.type === 'antonyms' ? renderAntonymsTable(cat.items) : renderStandardTable(cat.items, cat.show_category);
+        }
+        return cat.subcategories.map(sub => `
+            <section class="subcat-block">
+                <h6 class="subcat-title">
+                    <i class="material-icons ${sub.type === 'antonyms' ? 'orange-text text-darken-2' : 'indigo-text'}">${escapeHtml(sub.icon)}</i>
+                    ${escapeHtml(sub.card_title || sub.name)}
+                </h6>
+                ${sub.description ? `<p class="grey-text subcat-description">${escapeHtml(sub.description)}</p>` : ''}
+                ${sub.type === 'antonyms' ? renderAntonymsTable(sub.items) : renderStandardTable(sub.items, false)}
+            </section>
+        `).join('');
+    }
+
     function renderCategories(categories) {
         const navList = document.getElementById('tabs-header-list');
         const contentContainer = document.getElementById('tabs-content-container');
@@ -681,11 +802,10 @@
                 <div class="col s12 tab-content" id="${escapeHtml(catId)}">
                     <div class="card-panel white z-depth-1">
                         <h5 class="card-panel-title">
-                            <i class="material-icons medium ${cat.type === 'antonyms' ? 'orange-text text-darken-2' : 'indigo-text'}">${escapeHtml(cat.icon)}</i>
-                            ${escapeHtml(displayTitle)}
+                            <i class="material-icons medium ${cat.type === 'antonyms' ? 'orange-text text-darken-2' : 'indigo-text'}">${escapeHtml(cat.icon)}</i>                            ${escapeHtml(displayTitle)}
                         </h5>
                         ${cat.description ? `<p class="grey-text text-darken-1">${escapeHtml(cat.description)}</p>` : ''}
-                        ${cat.type === 'antonyms' ? renderAntonymsTable(cat.items) : renderStandardTable(cat.items, cat.show_category)}
+                        ${renderCardContent(cat)}
                     </div>
                 </div>
             `;

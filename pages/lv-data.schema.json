@@ -35,13 +35,13 @@
   },
   "definitions": {
     "known_categories": {
-      "description": "Реестр категорий. Синхронизирован с таблицей в DATA_FORMAT.md §4. Расширяйте обе записи одновременно.",
+      "description": "Реестр вкладок первого уровня. Синхронизирован с таблицей в DATA_FORMAT.md §4. Расширяйте обе записи одновременно.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "Антонимы": {
+        "Прилагательные": {
           "type": "string",
-          "const": "compare_arrows"
+          "const": "spellcheck"
         },
         "Семья и люди": {
           "type": "string",
@@ -78,10 +78,31 @@
         "Местоимения и фразы": {
           "type": "string",
           "const": "chat"
-        },
-        "Цвета": {
-          "type": "string",
-          "const": "palette"
+        }
+      }
+    },
+    "known_subcategories": {
+      "description": "Реестр подкатегорий групп: группа → карточки. Синхронизирован с DATA_FORMAT.md §4.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Прилагательные": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Антонимы": {
+              "type": "string",
+              "const": "compare_arrows"
+            },
+            "Цвета": {
+              "type": "string",
+              "const": "palette"
+            },
+            "Качества и свойства": {
+              "type": "string",
+              "const": "emoji_objects"
+            }
+          }
         }
       }
     },
@@ -217,13 +238,44 @@
           "minLength": 1
         },
         "items": {
-          "description": "Форма элементов зависит от type; проверяется ветками category Standard/Antonyms.",
-          "type": "array",
-          "minItems": 1
+          "description": "Слова (у группы — карточки-подкатегории). Форма проверяется в group_category/leaf_category.",
+          "type": "array"
         }
       }
     },
     "category": {
+      "description": "Категория. Может быть группой подкатегорий (в items лежат карточки, см. group_category) или обычной карточкой со словами (leaf_category).",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/group_category"
+        },
+        {
+          "$ref": "#/definitions/leaf_category"
+        }
+      ]
+    },
+    "group_category": {
+      "description": "Группа подкатегорий: «Прилагательные» → «Антонимы», «Цвета», «Качества и свойства». Опознаётся по данным: items состоит из объектов, у которых есть собственный массив items. Пустой items у группы допустим — карточка просто ещё не наполнена (слова могут прийти в следующем файле).",
+      "allOf": [
+        {
+          "$ref": "#/definitions/category_base"
+        }
+      ],
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "description": "Карточки-подкатегории. Пустой массив допустим — как и листовая категория без слов.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/leaf_category"
+          }
+        }
+      }
+    },
+    "leaf_category": {
+      "description": "Обычная категория со словами (вкладка или карточка внутри группы). items может быть пустым: так оформляют категорию-заглушку заранее.",
       "allOf": [
         {
           "$ref": "#/definitions/category_base"
@@ -243,7 +295,6 @@
         "properties": {
           "items": {
             "type": "array",
-            "minItems": 1,
             "items": {
               "$ref": "#/definitions/antonym_item"
             }
@@ -254,7 +305,6 @@
         "properties": {
           "items": {
             "type": "array",
-            "minItems": 1,
             "items": {
               "$ref": "#/definitions/standard_item"
             }

@@ -3,131 +3,218 @@
   "module_info": "По состоянию на конец блока №2 (+ Обновление из Quizlet)",
   "categories": [
     {
-      "name": "Антонимы",
-      "icon": "compare_arrows",
-      "type": "antonyms",
-      "card_title": "Прилагательные - Пары Антонимов",
-      "description": "Наведите на слово для просмотра примера предложения.",
+      "name": "Прилагательные",
+      "icon": "spellcheck",
+      "card_title": "Прилагательные",
+      "description": "Качества и свойства: отдельные слова и пары антонимов.",
       "items": [
         {
-          "word_a": "liels",
-          "translation_a": "большой",
-          "example_a": "Šis dzīvoklis ir liels.",
-          "icon_a": "🐘",
-          "word_b": "mazs",
-          "translation_b": "маленький",
-          "example_b": "Kaķis ir mazs.",
-          "icon_b": "🐭"
+          "name": "Антонимы",
+          "icon": "compare_arrows",
+          "type": "antonyms",
+          "card_title": "Прилагательные - Пары Антонимов",
+          "items": [
+            {
+              "word_a": "liels",
+              "translation_a": "большой",
+              "example_a": "Šis dzīvoklis ir liels.",
+              "icon_a": "🐘",
+              "word_b": "mazs",
+              "translation_b": "маленький",
+              "example_b": "Kaķis ir mazs.",
+              "icon_b": "🐭"
+            },
+            {
+              "word_a": "vecs",
+              "translation_a": "старый",
+              "example_a": "Šī māja ir veca.",
+              "icon_a": "👴",
+              "word_b": "jauns",
+              "translation_b": "новый / молодой",
+              "example_b": "Viņš vēl ir jauns.",
+              "icon_b": "👶"
+            },
+            {
+              "word_a": "ātrs",
+              "translation_a": "быстрый",
+              "example_a": "Vilciens ir ātrs.",
+              "icon_a": "🚀",
+              "word_b": "lēns",
+              "translation_b": "медленный",
+              "example_b": "Autobuss ir lēns.",
+              "icon_b": "🐢"
+            },
+            {
+              "word_a": "gudrs",
+              "translation_a": "умный",
+              "example_a": "Viņš ir gudrs students.",
+              "icon_a": "🧠",
+              "word_b": "muļķīgs",
+              "translation_b": "глупый",
+              "example_b": "Tā ir muļķīga kļūda.",
+              "icon_b": "🤪"
+            },
+            {
+              "word_a": "čakls",
+              "translation_a": "трудолюбивый",
+              "example_a": "Viņš ir čakls darbinieks.",
+              "icon_a": "⚡",
+              "word_b": "slinks",
+              "translation_b": "ленивый",
+              "example_b": "Šodien es esmu slinks.",
+              "icon_b": "🛋️"
+            },
+            {
+              "word_a": "skaļš",
+              "translation_a": "громкий",
+              "example_a": "Mūzika ir pārāk skaļa.",
+              "icon_a": "📢",
+              "word_b": "kluss",
+              "translation_b": "тихий",
+              "example_b": "Šeit ir kluss.",
+              "icon_b": "🤫"
+            },
+            {
+              "word_a": "silts",
+              "translation_a": "теплый",
+              "example_a": "Šodien ir silts laiks.",
+              "icon_a": "🔥",
+              "word_b": "auksts",
+              "translation_b": "холодный",
+              "example_b": "Ūdens ir auksts.",
+              "icon_b": "❄️"
+            },
+            {
+              "word_a": "interesants",
+              "translation_a": "интересный",
+              "example_a": "Grāmata ir interesanta.",
+              "icon_a": "🎨",
+              "word_b": "garlaicīgs",
+              "translation_b": "скучный",
+              "example_b": "Filma bija garlaicīga.",
+              "icon_b": "🥱"
+            },
+            {
+              "word_a": "garš",
+              "translation_a": "длинный",
+              "example_a": "Šī iela ir garša.",
+              "icon_a": "📏",
+              "word_b": "īss",
+              "translation_b": "короткий",
+              "example_b": "Zīmulis ir īss.",
+              "icon_b": "📌"
+            },
+            {
+              "word_a": "skaists",
+              "translation_a": "красивый",
+              "example_a": "Rīga ir skaista pilsēta.",
+              "icon_a": "🌸",
+              "word_b": "neglīts",
+              "translation_b": "некрасивый",
+              "example_b": "Skats ir neglīts.",
+              "icon_b": "⚠️"
+            },
+            {
+              "word_a": "dārgs",
+              "translation_a": "дорогой",
+              "example_a": "Šis auto ir dārgs.",
+              "icon_a": "💎",
+              "word_b": "lēts",
+              "translation_b": "дешевый",
+              "example_b": "Šī grāmata ir lēta.",
+              "icon_b": "🏷️"
+            },
+            {
+              "word_a": "labs",
+              "translation_a": "хороший",
+              "example_a": "Tas ir labs cilvēks.",
+              "icon_a": "😊",
+              "word_b": "slikts",
+              "translation_b": "плохой",
+              "example_b": "Tas ir slikts ieradums.",
+              "icon_b": "🙁"
+            }
+          ]
         },
         {
-          "word_a": "vecs",
-          "translation_a": "старый",
-          "example_a": "Šī māja ir veca.",
-          "icon_a": "👴",
-          "word_b": "jauns",
-          "translation_b": "новый / молодой",
-          "example_b": "Viņš vēl ir jauns.",
-          "icon_b": "👶"
-        },
-        {
-          "word_a": "ātrs",
-          "translation_a": "быстрый",
-          "example_a": "Vilciens ir ātrs.",
-          "icon_a": "🚀",
-          "word_b": "lēns",
-          "translation_b": "медленный",
-          "example_b": "Autobuss ir lēns.",
-          "icon_b": "🐢"
-        },
-        {
-          "word_a": "gudrs",
-          "translation_a": "умный",
-          "example_a": "Viņš ir gudrs students.",
-          "icon_a": "🧠",
-          "word_b": "muļķīgs",
-          "translation_b": "глупый",
-          "example_b": "Tā ir muļķīga kļūda.",
-          "icon_b": "🤪"
-        },
-        {
-          "word_a": "čakls",
-          "translation_a": "трудолюбивый",
-          "example_a": "Viņš ir čakls darbinieks.",
-          "icon_a": "⚡",
-          "word_b": "slinks",
-          "translation_b": "ленивый",
-          "example_b": "Šodien es esmu slinks.",
-          "icon_b": "🛋️"
-        },
-        {
-          "word_a": "skaļš",
-          "translation_a": "громкий",
-          "example_a": "Mūzika ir pārāk skaļa.",
-          "icon_a": "📢",
-          "word_b": "kluss",
-          "translation_b": "тихий",
-          "example_b": "Šeit ir kluss.",
-          "icon_b": "🤫"
-        },
-        {
-          "word_a": "silts",
-          "translation_a": "теплый",
-          "example_a": "Šodien ir silts laiks.",
-          "icon_a": "🔥",
-          "word_b": "auksts",
-          "translation_b": "холодный",
-          "example_b": "Ūdens ir auksts.",
-          "icon_b": "❄️"
-        },
-        {
-          "word_a": "interesants",
-          "translation_a": "интересный",
-          "example_a": "Grāmata ir interesanta.",
-          "icon_a": "🎨",
-          "word_b": "garlaicīgs",
-          "translation_b": "скучный",
-          "example_b": "Filma bija garlaicīga.",
-          "icon_b": "🥱"
-        },
-        {
-          "word_a": "garš",
-          "translation_a": "длинный",
-          "example_a": "Šī iela ir garša.",
-          "icon_a": "📏",
-          "word_b": "īss",
-          "translation_b": "короткий",
-          "example_b": "Zīmulis ir īss.",
-          "icon_b": "📌"
-        },
-        {
-          "word_a": "skaists",
-          "translation_a": "красивый",
-          "example_a": "Rīga ir skaista pilsēta.",
-          "icon_a": "🌸",
-          "word_b": "neglīts",
-          "translation_b": "некрасивый",
-          "example_b": "Skats ir neglīts.",
-          "icon_b": "⚠️"
-        },
-        {
-          "word_a": "dārgs",
-          "translation_a": "дорогой",
-          "example_a": "Šis auto ir dārgs.",
-          "icon_a": "💎",
-          "word_b": "lēts",
-          "translation_b": "дешевый",
-          "example_b": "Šī grāmata ir lēta.",
-          "icon_b": "🏷️"
-        },
-        {
-          "word_a": "labs",
-          "translation_a": "хороший",
-          "example_a": "Tas ir labs cilvēks.",
-          "icon_a": "😊",
-          "word_b": "slikts",
-          "translation_b": "плохой",
-          "example_b": "Tas ir slikts ieradums.",
-          "icon_b": "🙁"
+          "name": "Качества и свойства",
+          "icon": "emoji_objects",
+          "card_title": "Качества и свойства",
+          "description": "Прилагательные о человеке, характере и свойствах предметов.",
+          "items": [
+            {
+              "icon": "❤️",
+              "word": "mīloša",
+              "translation": "любящая",
+              "example": "Viņa ir mīloša māte."
+            },
+            {
+              "icon": "😇",
+              "word": "labi audzināta",
+              "translation": "хорошо воспитанная",
+              "example": "Bērns ir labi audzināts."
+            },
+            {
+              "icon": "💖",
+              "word": "mīlīga",
+              "translation": "милая, ласковая",
+              "example": "Kaķēns ir ļoti mīlīgs."
+            },
+            {
+              "icon": "🤝",
+              "word": "pacietīgs",
+              "translation": "терпеливый",
+              "example": "Skolotājs ir pacietīgs."
+            },
+            {
+              "icon": "😌",
+              "word": "mierīgs",
+              "translation": "спокойный",
+              "example": "Jūra šodien ir mierīga."
+            },
+            {
+              "icon": "🎯",
+              "word": "atbildīgs",
+              "translation": "ответственный",
+              "example": "Viņš ir atbildīgs darbinieks."
+            },
+            {
+              "icon": "⭐",
+              "word": "godīgs",
+              "translation": "честный",
+              "example": "Tas bija godīgs gājiens."
+            },
+            {
+              "icon": "🤲",
+              "word": "izpalīdzīgs",
+              "translation": "отзывчивый",
+              "example": "Kaimiņš ir ļoti izpalīdzīgs."
+            },
+            {
+              "icon": "😄",
+              "word": "jautrs",
+              "translation": "веселый",
+              "example": "Mums bija jautrs vakars."
+            },
+            {
+              "icon": "🥰",
+              "word": "labsirdīga",
+              "translation": "добродушная, добрая",
+              "example": "Viņa ir labsirdīga sieviete."
+            },
+            {
+              "icon": "🐾",
+              "word": "bezšķirnes",
+              "translation": "беспородный",
+              "example": "Mājas suns ir bezšķirnes."
+            },
+            {
+              "icon": "🏆",
+              "word": "mīļākā",
+              "translation": "любимая",
+              "example": "Kāda ir tava mīļākā krāsa?"
+            }
+          ]
         }
       ]
     },
@@ -224,66 +311,6 @@
           "word": "sieva",
           "translation": "жена",
           "example": "Mana sieva ir skolotāja."
-        },
-        {
-          "icon": "❤️",
-          "word": "mīloša",
-          "translation": "любящая",
-          "example": "Viņa ir mīloša māte."
-        },
-        {
-          "icon": "😇",
-          "word": "labi audzināta",
-          "translation": "хорошо воспитанная",
-          "example": "Bērns ir labi audzināts."
-        },
-        {
-          "icon": "💖",
-          "word": "mīlīga",
-          "translation": "милая, ласковая",
-          "example": "Kaķēns ir ļoti mīlīgs."
-        },
-        {
-          "icon": "🤝",
-          "word": "pacietīgs",
-          "translation": "терпеливый",
-          "example": "Skolotājs ir pacietīgs."
-        },
-        {
-          "icon": "😌",
-          "word": "mierīgs",
-          "translation": "спокойный",
-          "example": "Jūra šodien ir mierīga."
-        },
-        {
-          "icon": "🎯",
-          "word": "atbildīgs",
-          "translation": "ответственный",
-          "example": "Viņš ir atbildīgs darbinieks."
-        },
-        {
-          "icon": "⭐",
-          "word": "godīgs",
-          "translation": "честный",
-          "example": "Tas bija godīgs gājiens."
-        },
-        {
-          "icon": "🤲",
-          "word": "izpalīdzīgs",
-          "translation": "отзывчивый",
-          "example": "Kaimiņš ir ļoti izpalīdzīgs."
-        },
-        {
-          "icon": "😄",
-          "word": "jautrs",
-          "translation": "веселый",
-          "example": "Mums bija jautrs vakars."
-        },
-        {
-          "icon": "🥰",
-          "word": "labsirdīga",
-          "translation": "добродушная, добрая",
-          "example": "Viņa ir labsirdīga sieviete."
         },
         {
           "icon": "😎",
@@ -773,12 +800,6 @@
           "word": "zvirbulis",
           "translation": "воробей",
           "example": "Mazs zvirbulis meklē graudus."
-        },
-        {
-          "icon": "🐾",
-          "word": "bezšķirnes",
-          "translation": "беспородный",
-          "example": "Mājas suns ir bezšķirnes."
         },
         {
           "icon": "🏠",
@@ -1281,12 +1302,6 @@
           "word": "precējies",
           "translation": "женат",
           "example": "Mans brālis ir precējies."
-        },
-        {
-          "icon": "🏆",
-          "word": "mīļākā",
-          "translation": "любимая",
-          "example": "Kāda ir tava mīļākā krāsa?"
         },
         {
           "icon": "☝️",
