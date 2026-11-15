@@ -905,7 +905,7 @@
         var rows = document.querySelectorAll('tbody tr');
 
         rows.forEach(function (row) {
-            var text = row.textContent.toLowerCase();
+            var text = (row.textContent || '').toLowerCase();
             if (text.indexOf(filter) > -1) {
                 row.style.display = '';
             } else {
